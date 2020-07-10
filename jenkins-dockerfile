@@ -1,0 +1,12 @@
+sudo mkdir /dock
+sudo cd /dock
+sudo cp /var/lib/jenkins/workspace/package/target/addressbook.war .
+touch Dockerfile
+cat <<EOT>> Dockerfile
+From tomcat
+ADD addressbook.war  /usr/local/tomcat/webapps
+CMD "catalina.sh" "run"
+EXPOSE 8080
+EOT
+sudo docker build -t saipavanseetha/deployimg:$BUILD_NUMBER .
+sudo docker run -itd --name deploy -p 9000:8080 saipavanseetha/deployimg:$BUILD_NUMBER
