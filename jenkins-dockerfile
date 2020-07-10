@@ -9,4 +9,4 @@ CMD "catalina.sh" "run"
 EXPOSE 8080
 EOT
 sudo docker build -t saipavanseetha/deployimg:$BUILD_NUMBER .
-sudo docker run -itd --name deploy -p 9000:8080 saipavanseetha/deployimg:$BUILD_NUMBER
+sudo docker run -itd --name deploy-$BUILD_NUMBER -p 8080 saipavanseetha/deployimg:$BUILD_NUMBER
