@@ -1,0 +1,46 @@
+node{
+    stage("git clone"){
+        git 'https://github.com/sailinux24/DevOpsClassCodes.git'
+    }
+    stage("maven clean build"){
+        def mavenHome = tool name:"maven-3.6.3",type: "maven"
+        def mavenCMD = "${mavenHome}/bin/mvn "
+        sh "${mavenCMD}  clean package"
+        
+    }
+    stage("Build docker image"){
+        sh "docker build -t devopsstuff09/devops2 ."
+    }
+    
+    stage("push to hub"){
+        withCredentials([string(credentialsId: 'DOCKER_HUB_CRED', variable: 'DOCKER_HUB_CRED')]) {
+sh "docker login -u  devopsstuff09 -p ${DOCKER_HUB_CRED}"
+}
+        sh "docker push devopsstuff09/devops2 "
+    }
+}
+
+
+
+
+
+
+Dockerfile
+
++++
+FROM tomcat:8.0-alpine
+
+LABEL maintainer="devopsstuff09@gmail.com"
+
+ADD  target/addressbook.war /usr/local/tomcat/webapps/
+
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
+
+++++
+Issues
+
+add jenkins to visudo and add chmod 777 /var/run/docker.sock
+
+docker login
