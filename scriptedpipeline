@@ -9,16 +9,22 @@ node{
         
     }
     stage("Build docker image"){
-        sh "docker build -t devopsstuff09/devops2 ."
+        sh "docker build -t devopsstuff09/devops2:$BUILD_NUMBER ."
     }
     
     stage("push to hub"){
         withCredentials([string(credentialsId: 'DOCKER_HUB_CRED', variable: 'DOCKER_HUB_CRED')]) {
 sh "docker login -u  devopsstuff09 -p ${DOCKER_HUB_CRED}"
 }
-        sh "docker push devopsstuff09/devops2 "
+        sh "docker push devopsstuff09/devops2:$BUILD_NUMBER "
+    }
+    
+    stage("deploy to kubernetscluster"){
+       sh  "kubectl create deployment address-book --image=devopsstuff09/devops2:$BUILD_NUMBER"
     }
 }
+
+
 
 
 
