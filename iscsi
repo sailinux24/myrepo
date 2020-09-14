@@ -1,0 +1,45 @@
+[root@nagioserver ~]# targetcli 
+targetcli shell version 2.1.fb49
+Copyright 2011-2013 by Datera, Inc and others.
+For help on commands, type 'help'.
+
+/> /iscsi/iqn.2020-09.com.example:nagioserver/tpg1/portals/ delete 0.0.0.0 ip_port=3260          ##### to delete  and thenrecreate####
+Deleted network portal 0.0.0.0:3260
+/> exit
+Global pref auto_save_on_exit=true
+Last 10 configs saved in /etc/target/backup/.
+Configuration saved to /etc/target/saveconfig.json
+[root@nagioserver ~]# targetcli 
+targetcli shell version 2.1.fb49
+Copyright 2011-2013 by Datera, Inc and others.
+For help on commands, type 'help'.
+
+/> /iscsi/iqn.2020-09.com.example:nagioserver/tpg1/portals create 192.168.57.5                ##### recreate again  ######
+Using default IP port 3260
+Created network portal 192.168.57.5:3260.
+/> ls
+o- / .............................................................................. [...]
+  o- backstores ................................................................... [...]
+  | o- block ....................................................... [Storage Objects: 1]
+  | | o- nagioserver.disk ........... [/dev/vgroup/disk_lv (4.0GiB) write-thru activated]
+  | |   o- alua ........................................................ [ALUA Groups: 1]
+  | |     o- default_tg_pt_gp ............................ [ALUA state: Active/optimized]
+  | o- fileio ...................................................... [Storage Objects: 0]
+  | o- pscsi ....................................................... [Storage Objects: 0]
+  | o- ramdisk ..................................................... [Storage Objects: 0]
+  o- iscsi ................................................................. [Targets: 1]
+  | o- iqn.2020-09.com.example:nagioserver .................................... [TPGs: 1]
+  |   o- tpg1 .................................................... [no-gen-acls, no-auth]
+  |     o- acls ............................................................... [ACLs: 1]
+  |     | o- iqn.2020-09.com.example:worker ............................ [Mapped LUNs: 1]
+  |     |   o- mapped_lun0 ........................... [lun0 block/nagioserver.disk (rw)]
+  |     o- luns ............................................................... [LUNs: 1]
+  |     | o- lun0 ..... [block/nagioserver.disk (/dev/vgroup/disk_lv) (default_tg_pt_gp)]
+  |     o- portals ......................................................... [Portals: 1]
+  |       o- 192.168.57.5:3260 ..................................................... [OK]
+  o- loopback .............................................................. [Targets: 0]
+/> exit
+Global pref auto_save_on_exit=true
+Last 10 configs saved in /etc/target/backup/.
+Configuration saved to /etc/target/saveconfig.json
+[root@nagioserver ~]#
