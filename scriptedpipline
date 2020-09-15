@@ -1,0 +1,33 @@
+##### 1st difference job will get executed build phase but not test phase as it has error 123 is nnot in quotes
+node{
+    stage("Build"){
+        echo "Building"
+    }
+    stage("test"){
+        echo 123
+    }
+}
+
+#######
+
+###but declartive pipeline will fail intially only it will check whole validation if correct it will execute otherse it will fail intially only.
+pipeline {
+    agent any
+    stages {
+        stage("Build"){
+            steps{
+                echo "Building"
+            }
+        }
+        stage("test"){
+            steps{
+                echo "123"
+            }
+        }
+    }
+}
+
+
+####
+scripted pipeline will not allow you to start at one stage but declrative allows  you to restart at ay stage like post deploymet steps
+
