@@ -1,0 +1,140 @@
+elk
+
+step 1
+
+curl -X PUT "10.11.23.90:9200/_cluster/settings?pretty" -H 'Content-Type: application/json' -d'
+{
+  "persistent": {
+    "cluster.routing.allocation.enable": "primaries"
+  }
+}
+'
+
+
+step 2
+
+
+
+curl -X POST "10.11.23.90:9200/_flush/synced?pretty"
+
+
+
+step 3
+
+
+systemctl stop elasticsearch.service
+
+If you are running Elasticsearch as a daemon:  kill that process
+
+
+step 4
+
+
+upgrade and start the service
+
+
+
+step 5
+
+curl -X GET "localhost:9200/_cat/nodes?pretty"
+
+
+
+curl -X POST "10.11.80.252:9200/_ml/set_upgrade_mode?enabled=true&pretty"
+
+
+step 6
+
+curl -X PUT "10.11.23.90:9200/_cluster/settings?pretty" -H 'Content-Type: application/json' -d'
+{
+  "persistent": {
+    "cluster.routing.allocation.enable": null
+  }
+}
+'
+
+
+
+
+
+
+
+
+
+[root@den-nonphi-elk02 ~]# cd /usr/share/elasticsearch/
+[root@den-nonphi-elk02 elasticsearch]# ls
+bin  lib  LICENSE.txt  modules  NOTICE.txt  plugins  README.textile
+[root@den-nonphi-elk02 elasticsearch]# cd plugins/
+[root@den-nonphi-elk02 plugins]# ls
+x-pack
+[root@den-nonphi-elk02 plugins]# cd ..
+[root@den-nonphi-elk02 elasticsearch]# c
+x-pack
+WARNING: plugin [x-pack] was built for Elasticsearch version 6.1.2 but version 6.8.8 is required
+[root@den-nonphi-elk02 elasticsearch]# 
+[root@den-nonphi-elk02 elasticsearch]# 
+[root@den-nonphi-elk02 elasticsearch]# 
+[root@den-nonphi-elk02 elasticsearch]# bin/elasticsearch-plugin remove x-pack
+-> removing [x-pack]...
+-> preserving plugin config files [/etc/elasticsearch/x-pack] in case of upgrade; use --purge if not needed
+[root@den-nonphi-elk02 elasticsearch]# bin/elasticsearch-plugin install x-pack
+ERROR: this distribution of Elasticsearch contains X-Pack by default
+[root@den-nonphi-elk02 elasticsearch]# 
+[root@den-nonphi-elk02 elasticsearch]# 
+[root@den-nonphi-elk02 elasticsearch]# 
+[root@den-nonphi-elk02 elasticsearch]# systemctl start elasticsearch.service
+[root@den-nonphi-elk02 elasticsearch]# systemctl status elasticsearch.service
+● elasticsearch.service - Elasticsearch
+   Loaded: loaded (/usr/lib/systemd/system/elasticsearch.service; disabled; vendor preset: disabled)
+   Active: active (running) since Thu 2020-04-23 08:13:05 EDT; 10s ago
+     Docs: http://www.elastic.co
+ Main PID: 28084 (java)
+   CGroup: /system.slice/elasticsearch.service
+           └─28084 /bin/java -Xms29g -Xmx29g -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseC...
+
+Apr 23 08:13:05 den-nonphi-elk02 systemd[1]: Started Elasticsearch.
+[root@den-nonphi-elk02 elasticsearch]#
+
+
+
+curl -X PUT "10.11.80.251:9200/_cluster/settings?pretty" -H 'Content-Type: application/json' -d'
+{
+  "persistent": {
+    "cluster.routing.allocation.enable": null
+  }
+}
+'
+
+
+[root@den-signoff02 conf.d]# cat 999-output.conf 
+output{
+  stdout{codec => dots}
+  redis {
+      host => "den-nonphi-elk01"
+      port => 6379
+      data_type => "list"
+      key => "logstash"
+  }
+}
+You have mail in /var/spool/mail/root
+[root@den-signoff02 conf.d]# vi 999-ou
+
+
+redis-cli  -h den-nonphi-elk01 -p 6380  monitor
+
+/usr/local/bin/redis-cli -h den-nonphi-elk01 -p 6380 llen logstash
+(integer) 14280
+
+
+
+/usr/share/logstash/bin/logstash  -f /etc/logstash/conf.d/ 
+
+
+curl -XGET 'http://den-nonphi-elk02:9200/_cluster/health?pretty'
+
+
+https://www.fedex.com/apps/fedextrack/?action=track&trackingnumber=135290155993&cntry_code=us&locale=en_US
+
+
++++++++
+

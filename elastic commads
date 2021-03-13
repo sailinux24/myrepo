@@ -1,0 +1,3555 @@
+Last login: Tue Oct  6 09:53:21 on console
+PRINHYLTPAP1411:~ saipavan$ ssh -p3389 sseetha@den-druid01
+The authenticity of host '[den-druid01]:3389 ([10.11.21.226]:3389)' can't be established.
+ECDSA key fingerprint is SHA256:fuosVfrUYFRpuYjUIDTZMm3vLLArMiuA4hRIOPpV3Is.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[den-druid01]:3389,[10.11.21.226]:3389' (ECDSA) to the list of known hosts.
+sseetha@den-druid01's password: 
+Permission denied, please try again.
+sseetha@den-druid01's password: 
+Permission denied, please try again.
+sseetha@den-druid01's password: 
+
+PRINHYLTPAP1411:~ saipavan$ ssh -p3389 root@den-druid01
+root@den-druid01's password: 
+Permission denied, please try again.
+root@den-druid01's password: 
+Last failed login: Tue Oct  6 04:26:35 UTC 2020 from 10.28.16.109 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Wed Sep 30 23:09:34 2020 from 10.28.19.190
+
+
+     .d8888b.                    888    888 d8b          888      888
+    d88P  Y88b                   888    888 Y8P          888      888
+    888    888                   888    888              888      888
+    888         8888b.  .d8888b  888888 888 888  .d88b.  88888b.  888888
+    888            "88b 88K      888    888 888 d88P"88b 888 "88b 888
+    888    888 .d888888 "Y8888b. 888    888 888 888  888 888  888 888
+    Y88b  d88P 888  888      X88 Y88b.  888 888 Y88b 888 888  888 Y88b.
+     "Y8888P"  "Y888888  88888P'  "Y888 888 888  "Y88888 888  888  "Y888
+                                                     888
+                                                Y8b d88P
+                                                 "Y88P"
+
+
+IMPORTANT: This machine is configured to run Chef periodically.
+
+Changes made manually are likely to be eradicated the next time Chef runs,
+and this is a feature, not a problem. If you need to change the machine,
+update the cookbook and check your changes into the Chef repository.
+
+Hostname: den-druid01
+Chef Data:
+  * Node Name: den-druid01
+  * Run list: clh_base_server,clh_base_server
+  * Last successful Chef run: Mon Jul 20 09:28:02 UTC 2020
+  * The last 7456 chef runs have failed.
+OS Version: CentOS Linux release 7.8.2003 (Core)
+Kernel Version: 3.10.0-1127.el7.x86_64
+Virtualization System: vmware
+
+-----------------------------------------------------------------
+This system is for the use of authorized users only.
+Individuals using this computer system without authority, or in
+excess of their authority, are subject to having all of their
+activities on this system monitored and recorded by system
+personnel.
+
+In the course of monitoring individuals improperly using this
+system, or in the course of system maintenance, the activities
+of authorized users may also be monitored.
+
+Anyone using this system expressly consents to such monitoring
+and is advised that if such monitoring reveals possible
+evidence of criminal activity, system personnel may provide the
+evidence of such monitoring to law enforcement officials.
+-----------------------------------------------------------------
+
+
+
+Display health test results by running 'clh run all|live|acceptance tests.
+-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+[root@den-druid01 ~]# 
+[root@den-druid01 ~]# 
+[root@den-druid01 ~]# 
+[root@den-druid01 ~]# 
+[root@den-druid01 ~]# 
+[root@den-druid01 ~]# 
+[root@den-druid01 ~]# 
+[root@den-druid01 ~]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                    NAMES
+6ba61bce8a2c        apache/druid:0.19.0   "/druid.sh router"       3 weeks ago         Up 5 days           0.0.0.0:8888->8888/tcp                   router
+0345fec02444        apache/druid:0.19.0   "/druid.sh historical"   3 weeks ago         Up 5 days           0.0.0.0:8083->8083/tcp                   historical
+63468e7041b7        apache/druid:0.19.0   "/druid.sh broker"       3 weeks ago         Up 5 days           0.0.0.0:8082->8082/tcp                   broker
+b5af31aeaa4d        apache/druid:0.19.0   "/druid.sh middleM..."   3 weeks ago         Up 5 days           0.0.0.0:8091->8091/tcp                   middlemanager
+629ab1a09fe8        apache/druid:0.19.0   "/druid.sh coordin..."   3 weeks ago         Up 5 days           0.0.0.0:8081->8081/tcp                   coordinator
+81060b79576d        postgres:latest       "docker-entrypoint..."   2 months ago        Up 5 days           5432/tcp                                 postgres
+c7921b38f2db        zookeeper:3.5         "/docker-entrypoin..."   2 months ago        Up 5 days           2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   zookeeper
+[root@den-druid01 ~]# ls
+anaconda-ks.cfg  original-ks.cfg  project
+[root@den-druid01 ~]# cd project/
+[root@den-druid01 project]# ls
+druid
+[root@den-druid01 project]# cd druid/
+[root@den-druid01 druid]# ls
+CONTRIBUTING.md  dev                 indexing-hadoop                          services
+LABELS           distribution        indexing-service                         setup-hooks.sh
+LICENSE          docs                integration-tests                        sql
+NOTICE           examples            licenses                                 updates-data.json
+README.md        extendedset         licenses.yaml                            upload.sh
+README.template  extensions          owasp-dependency-check-suppressions.xml  web-console
+benchmarks       extensions-contrib  pom.xml                                  website
+cloud            extensions-core     processing
+codestyle        hll                 publications
+core             hooks               server
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:50:56:be:b4:83 brd ff:ff:ff:ff:ff:ff
+    inet 10.11.21.226/24 brd 10.11.21.255 scope global eth0
+       valid_lft forever preferred_lft forever
+3: br-0b30c2d5a442: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:0f:ee:1a:a0 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 scope global br-0b30c2d5a442
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:00:3b:68:a1 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+272: veth21b7404@if271: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether ce:d8:b1:d9:12:e4 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+274: veth5331400@if273: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 92:60:fd:a4:5d:ca brd ff:ff:ff:ff:ff:ff link-netnsid 0
+276: vethe0eb56f@if275: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 66:82:21:2a:bd:24 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+278: veth83b71f4@if277: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether fe:96:fe:55:d8:d0 brd ff:ff:ff:ff:ff:ff link-netnsid 4
+280: veth00903c5@if279: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 56:da:e5:86:f2:36 brd ff:ff:ff:ff:ff:ff link-netnsid 6
+282: veth8578f34@if281: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 12:c1:3e:96:a7:db brd ff:ff:ff:ff:ff:ff link-netnsid 5
+284: veth358a02d@if283: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 5e:6e:7b:1d:ad:68 brd ff:ff:ff:ff:ff:ff link-netnsid 7
+[root@den-druid01 druid]# free -h
+              total        used        free      shared  buff/cache   available
+Mem:            31G         16G        1.0G        1.6G         14G         13G
+Swap:            0B          0B          0B
+You have new mail in /var/spool/mail/root
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+You have mail in /var/spool/mail/root
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+You have mail in /var/spool/mail/root
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# ping google.com
+PING google.com (172.217.12.14) 56(84) bytes of data.
+64 bytes from den02s02-in-f14.1e100.net (172.217.12.14): icmp_seq=1 ttl=116 time=2.17 ms
+64 bytes from den02s02-in-f14.1e100.net (172.217.12.14): icmp_seq=2 ttl=116 time=2.24 ms
+^C
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 2.174/2.210/2.247/0.059 ms
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# 
+[root@den-druid01 druid]# history 
+   11  clear
+   12  history 
+   13   sysctl net.ipv6.conf.all.disable_ipv6=1
+   14   sysctl -w net.ipv4.conf.all.forwarding=1
+   15  netstat -antup |grep 443
+   16  netstat -antup |grep 8888
+   17  service docker reload
+   18  netstat -antup |grep 8888
+   19  service docker restart
+   20  netstat -antup |grep
+   21  netstat -antup |grep 8888
+   22  docke rps
+   23  docke ps
+   24  history 
+   25  cat /proc/sys/net/ipv4/ip_forward
+   26  sysctl net.ipv6.conf.all.disable_ipv6=1
+   27  sysctl net.ipv4.ip_forward net.ipv4.ip_forward = 0
+   28  sysctl -w net.ipv4.conf.all.forwarding=1
+   29  docker ps -a
+   30  clh-sourdough-disable --disable
+   31  systemctl status docker
+   32  cd project/druid/
+   33  ls
+   34  cd distribution/docker/
+   35  ls
+   36  docker-compose up -d
+   37  netstat -plant | grep 8888
+   38  cat /proc/sys/net/ipv4/ip_forward
+   39  systemctl status docker
+   40  docker ps
+   41  cat /proc/sys/net/ipv4/ip_forward
+   42  sysctl net.ipv4.conf.all.forwarding=1
+   43  systemctl restart docker
+   44  docker-compose up -d
+   45  docker ps
+   46  docker ps -a
+   47  docker ps
+   48  netstat -plat | grep 8888
+   49  docker-compose up -d
+   50  docker ps
+   51  netstat -plat | grep 8888
+   52  docker ps
+   53  netstat -plat | grep 8888
+   54  netstat -plannt | grep 8888
+   55  docker ps
+   56  cat /etc/docker/daemon.json 
+   57  cat /etc/sysctl.conf 
+   58  vi /etc/sysctl.conf 
+   59  netstat -plannt | grep 8888
+   60  vi Edit /etc/docker/daemon.json and set the ipv6 key to true.
+   61  vi /etc/docker/daemon.json
+   62  service docker restart
+   63  netstat -antup |grep 8888
+   64  ls -ltr
+   65  ps -ef |grep druid
+   66  ls -ltr
+   67  cd /tmp
+   68  ls -tlr
+   69  cd druid
+   70  ls -ltr
+   71  df -h
+   72  cd tmp
+   73  cd /tmp
+   74  ls -ltr
+   75  df -h
+   76  ls -tlr
+   77  cd druid
+   78  ls -tlr
+   79  ps -ef |grep druid
+   80  ps -ef |grep postgres
+   81  ls -tlr
+   82  date
+   83  cd /tmp
+   84  ls -ltr
+   85  telnet den-nonprodphi-kafka5-01 9092
+   86  ping den-nonprodphi-kafka5-01
+   87  ps -ef|grep druid
+   88  cd conf
+   89  cd 
+   90  cd /usr/local
+   91  ls -ltr
+   92  cd ..
+   93  ls -ltr
+   94  cd /opt
+   95  ls -ltr
+   96  which driud
+   97  locate druid
+   98  cd 
+   99  ls -ltr
+  100  cd project
+  101  ls -tlr
+  102  cd *
+  103  ls -ltr
+  104  cd conf
+  105   cat README.md
+  106  less  README.md
+  107  df -h
+  108   cat /etc/fstab
+  109  docker ps
+  110  docker --?
+  111  docker ps
+  112  docker attach 1e71673de3d7
+  113  exit
+  114  cd .ssh/
+  115  ls
+  116  cat authorized_keys 
+  117  vi authorized_keys 
+  118  w
+  119  tail /var/log/secure
+  120  w
+  121  tail -f /var/log/secure
+  122  cd .ssh/
+  123  ls
+  124  cat authorized_keys 
+  125  clh-sourdough-disable --disable
+  126  vi authorized_keys 
+  127  cat authorized_keys 
+  128  ps -ef | grep soudh
+  129  vi /etc/ssh/sshd_config 
+  130  ls
+  131  ls -l
+  132  vi authorized_keys2
+  133  ls -l
+  134  chown 600 authorized_keys2 
+  135  ls -l
+  136  chown 600 authorized_keys2 
+  137  ls -l
+  138  systemctl restart sshd
+  139  sourdough-starter 
+  140  cat /etc/sysctl.conf 
+  141  history 
+  142  exit
+  143  ls -l
+  144  ls -R conf
+  145  cd project
+  146  ls -l
+  147  cd druid
+  148  ls -r
+  149  ls -R conf
+  150  cat .ssh/authorized_keys
+  151  vi .ssh/authorized_keys
+  152  vi .ssh/authorized_keys2 
+  153  w
+  154  last
+  155  ps -ef |grep druid
+  156  cd /tmp
+  157  ls -ltr
+  158  cd druid
+  159  ls -ltr
+  160  cd /opt
+  161  ls -ltr
+  162  cd /usr/
+  163  ls -ltr
+  164  cd ..
+  165  history 
+  166  cat /etc/docker/daemon.json
+  167  cat /etc/sysconfig/docker-network
+  168  cat /lib/systemd/system/docker.service
+  169  cat /etc/systemd/system/docker.service.d/http-proxy.conf 
+  170  df -Th
+  171  cd /tmp
+  172  ls -ltr
+  173  docker ps
+  174  df -h
+  175  exit
+  176  cd /home
+  177  ls -ltr
+  178  ls -ltr |grep rkumar
+  179  exit
+  180  passwd 
+  181  bin/dsql
+  182  ls -lrt
+  183  cd project
+  184  ls
+  185  cd druid/
+  186  ls -lrt
+  187  bin/dsql
+  188  w
+  189  last
+  190  cd .ssh/
+  191  ls
+  192  cat authorized_keys2 
+  193  cat /etc/ssh/sshd_config | grep key
+  194  vi authorized_keys2 
+  195  cat authorized_keys2 
+  196  vi authorized_keys2 
+  197  w
+  198  tail   -f /var/log/secure
+  199  vi /etc/ssh/sshd_config 
+  200  vi authorized_keys2 
+  201  vi /etc/ssh/sshd_config 
+  202  systemctl restart sshd
+  203  systemctl status sshd
+  204  ls
+  205  cd project/
+  206  ls
+  207  cd druid/
+  208  ls
+  209  cd dev
+  210  ls
+  211  cd ..
+  212  ls -lrt
+  213  cd examples
+  214  ls -lrt
+  215  cd quickstart
+  216  ls -lrt
+  217  cd tutorial/
+  218  ls
+  219  ls -lrt
+  220  pwd
+  221  cd ../
+  222  cd ..
+  223  ls
+  224  ls -lrt
+  225  bin/dsql
+  226  pwd
+  227  ps -ef
+  228  ls -lrt
+  229  cd quickstart
+  230  ls
+  231  cd quickstart
+  232  cd ../
+  233  ls
+  234  ls -lrt
+  235  cat quickstart/tutorial/updates-init-index.json
+  236  bin/post-index-task --file quickstart/tutorial/updates-init-index.json --url http://localhost:8081
+  237  ls -lrt
+  238  ./bin/start-micro-quickstart
+  239  export DRUID_SKIP_JAVA_CHECK=1
+  240  ./bin/start-micro-quickstart
+  241  losf -i 8081
+  242  losf -i tcp:8081
+  243  lssof -i tcp:8081
+  244  lsof -i tcp:8081
+  245  bin/post-index-task --file quickstart/tutorial/updates-init-index.json --url http://localhost:8888
+  246  ls
+  247  cd quickstart/
+  248  ls
+  249  cd tutorial/
+  250  ls -lrt
+  251  cat updates-data.json
+  252  pwd
+  253  cp updates-data.json ../updates-data.json
+  254  cd ../
+  255  ls
+  256  mv  updates-data.json ../
+  257  ls
+  258  cd ../
+  259  ls
+  260  mv updates-data.json ../
+  261  ls
+  262  cd ../
+  263  ls
+  264  mv updates-data.json ../
+  265  cd ../
+  266  ls
+  267  mv updates-data.json ../
+  268  ls
+  269  cd ../
+  270  ls
+  271  pwd
+  272  ls -lrt
+  273  chmod 777 updates-data.json
+  274  pwd
+  275  cat updates-data.json
+  276  cd /root/project/druid/examples/quickstart/tutorial
+  277  ls
+  278  ls -lrt
+  279  cat updates-append-index.json
+  280  cd
+  281  ls
+  282  cat updates-data.json
+  283  pwd
+  284  ps -ef |grep *start-micro-quickstart*
+  285  ps -ef |grep start-micro-quickstart
+  286  ps -ef |grep start
+  287  ls
+  288  cd project/druid/
+  289  ls
+  290  ls -lrt
+  291  cd extensions-core
+  292  ls
+  293  ls -lrt
+  294  cd ../
+  295  cd project/druid/
+  296  ls
+  297  cd examples/
+  298  ls
+  299  bin/dsql
+  300  pwd
+  301  systemctl status druid
+  302  sudo service druid-broker status
+  303  service druid-broker status
+  304  bin/systemctl status druid-broker.service
+  305  ps -ef |grep druid
+  306  uptime
+  307  cd /etc
+  308  ls -ltr
+  309  cd /home
+  310  ls -ltr
+  311  cd rkumar
+  312  cd
+  313  ls -ltr
+  314  find / -name start-micro-quickstart
+  315  cd /root/project/druid/examples/bin/
+  316  ls -ltr  start-micro-quickstart
+  317  cat  start-micro-quickstart
+  318  echo $WHEREAMI
+  319  docker ps
+  320  cd /home
+  321  ls -ltr rakumar
+  322  ls -ltr
+  323  last |more
+  324  docker ps
+  325  su - drout 
+  326  docker exec 6310cfffa360
+  327  docker exec -it 6310cfffa360
+  328  cd /
+  329  ls 0ltr
+  330  ls -ltr
+  331  cd /etc
+  332  ls -ltr
+  333  cd sudoers.d
+  334  ls -ltr
+  335  cat  20_iac_sudo_enabled
+  336  vi  20_iac_sudo_enabled
+  337  docker ps
+  338  find / -name druid.sh
+  339  cd /root/project/druid/distribution/docker/
+  340  ls -ltr 
+  341  cat druid.sh
+  342  cd
+  343  vi .bashrc
+  344  docker ps
+  345  cd /home/beong/
+  346  cd /home
+  347  ls -ltr
+  348  cd beong-local
+  349  ls -ltr
+  350  vi druid_docker.txt
+  351  ls -ltr
+  352  cat *
+  353  cd 
+  354  ls -ltr
+  355  cd -
+  356  ls -ltr
+  357  vi dri*
+  358  vi drui*txt
+  359  docker exec -it e2bf86e068e7
+  360  docker exec -it e2bf86e068e7 /bin/bash
+  361  docker ps
+  362  docker exec -it 6663ea0327a0  /bin/bash
+  363  cd
+  364  cd -
+  365  ls -ltr
+  366  vi druid_docker.txt
+  367  pwd
+  368  cp druid_docker.txt  /tmp/.
+  369  cat druid_docker.txt
+  370  rm -f /tmp/*txt
+  371  ls ltr
+  372  ls -ltr /tmp
+  373  docker ps
+  374  systemctl status docker
+  375  exit
+  376  cd /home
+  377  ls -ltr |more
+  378   
+  379  cd ..
+  380  docker ps
+  381  cd /etc/systemd/system
+  382  pwd
+  383  ls -ltr
+  384  cd docker.service.d
+  385  ls -ltr
+  386  cat http-proxy.conf
+  387  pwd
+  388  ls -ltr
+  389  cat http-proxy.conf
+  390  docker ps
+  391  ls -lrt
+  392  cd project
+  393  ls
+  394  cd druid/
+  395  ls
+  396  ls -lrt
+  397  history 
+  398  cat /etc/systemd/system/docker.service.d/http-proxy.conf 
+  399  cat /etc/docker/daemon.json
+  400  find / -name *runtime*
+  401  find / -name *runtime* |more
+  402  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  403  ls -ltr
+  404  exit
+  405  docker ps
+  406  ls
+  407  grep docker
+  408  druid.extensions.loadList=["postgresql-metadata-storage", "druid-hdfs-storage"]
+  409  find / -name *.yml
+  410  ls -lrt
+  411  cd project
+  412  ls -lrt
+  413  cd druid
+  414  ls -lrt
+  415  cd extensions-core
+  416  ls -lrt
+  417  cd kafka-indexing-service
+  418  ls -lrt
+  419  cat pom.xml
+  420  cd src/
+  421  ls
+  422  cd ../
+  423  ls
+  424  cd ../
+  425  ls -lrt
+  426  pwd
+  427  cat /root/project/druid/distribution/docker/docker-compose.yml
+  428  cd ../
+  429  ls
+  430  ls -lrt
+  431  find / -name *runtime*
+  432  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  433  docker ps
+  434  cd project/druid/
+  435  ls
+  436  cd examples/
+  437  ls
+  438  ls -lrt
+  439  cd quickstart
+  440  ls
+  441  cd ../
+  442  cd conf
+  443  ls
+  444  cd druid/
+  445  ls
+  446  cat cat /root/project/druid/distribution/docker/docker-compose.yml
+  447  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  448  docker ps
+  449  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  450  docker ps
+  451  cd /root/project/druid/
+  452  ls
+  453  cd distribution
+  454  ls -lrt
+  455  cd bin
+  456  ls
+  457  ls -lrt
+  458  cd
+  459  ls -lrt
+  460  mv updates-data.json /project/druid/
+  461  pwd
+  462  ls
+  463  mv updates-data.json /project/druid
+  464  cd project
+  465  cd druid
+  466  ls
+  467  pwd
+  468  cd
+  469  pwd
+  470  mv updates-data.json /root/project/druid/
+  471  find / -name *common.runtime.properties
+  472  pwd
+  473  cd project
+  474  cd druid/
+  475  ls -lrt
+  476  cd extensions-core
+  477  ls -lrt
+  478  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  479  /opt/apache-druid-0.17.0
+  480  pwd
+  481  cd ../
+  482  ls -lrt
+  483  find / -name */opt/apache-druid-0.17.0*
+  484  find / -name */opt/*
+  485  ls
+  486  cat cat /root/project/druid/distribution/docker/docker-compose.yml
+  487  pwd
+  488  ls
+  489  ls -lrt
+  490  cd distribution
+  491  ls
+  492  cd docker/
+  493  ls
+  494  ls -lrt
+  495  cd storage
+  496  ls -lrt
+  497  cd ../
+  498  ls
+  499  cd bin
+  500  ls
+  501  cd ../
+  502  ls
+  503  ls -lrt
+  504  docker ps
+  505  docker images
+  506  pwd
+  507  ls -lrt
+  508  cd extensions-core
+  509  ls
+  510  ls -lrt
+  511  cd ../
+  512  cd examples/
+  513  ls
+  514  cd ../
+  515  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  516  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  517  docker ps
+  518  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  519  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up
+  520  docker ps
+  521  pwd
+  522  ls
+  523  cd distribution
+  524  ls
+  525  cd docker
+  526  ls
+  527  cd ../
+  528  ls -lrt
+  529  cd ../
+  530  ls
+  531  ls -lrt
+  532  cd extensions-contrib
+  533  ls
+  534  ls -lrt
+  535  cd ../
+  536  ls -lrt
+  537  cp extensions-core extensions
+  538  ls -lrt
+  539  mkdir extensions
+  540  cp extensions-core/* extensions/
+  541  cd extensions-core
+  542  ls
+  543  ls -lrt
+  544  cd ../
+  545  cp -a /extensions-core/. /extensions
+  546  cp -a /extensions-core/. /extensions/
+  547  ls
+  548  ls -lrt
+  549  cp -r ~/extensions-core/. ~/extensions
+  550  ls extensions/
+  551  cd extensions
+  552  ls
+  553  cd ../
+  554  cp extensions-core extensions
+  555  sudo cp -R extensions-core extensions
+  556  cd extensions
+  557  ls
+  558  cd extensions-core
+  559  ls
+  560  cd ../
+  561  rm -r extensions-core
+  562  ls
+  563  cd extensions-core/
+  564  ls
+  565  cd ../
+  566  rm -d  extensions-core
+  567  rm -r  extensions-core
+  568  rm -rf extensions-core
+  569  ls
+  570  cd ../
+  571  ls
+  572  ls -lrt
+  573  sudo cp -R extensions-core/* extensions/
+  574  cd extensions
+  575  ls -lrt
+  576  cd ../
+  577  ls -lrt
+  578  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  579  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  580  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up 
+  581  docker ps
+  582  pwd
+  583  cd distribution/
+  584  ls
+  585  cd bin
+  586  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  587  pwd
+  588  cd ../../
+  589  ls
+  590  cd extensions/
+  591  ls
+  592  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  593  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  594  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  595  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  596  cat cat /root/project/druid/distribution/docker/docker-compose.yml
+  597  find / -name *apache/druid:0.17.0*
+  598  cd ../
+  599  pwd
+  600  ls
+  601  cd examples
+  602  ls
+  603  cd quickstart/
+  604  ls
+  605  cd tutorial/
+  606  ls
+  607  ls -lrt
+  608  pwd
+  609  find / -name *runtime.properties
+  610  cat /root/project/druid/examples/conf/druid/cluster/master/coordinator-overlord/runtime.properties
+  611  cat /root/project/druid/examples/conf/druid/cluster/data/middleManager/runtime.properties
+  612  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  613  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  614  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  615  vi /root/project/druid/examples/conf/druid/cluster/data/middleManager/runtime.properties
+  616  vi /root/project/druid/examples/conf/druid/cluster/master/coordinator-overlord/runtime.properties
+  617  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  618  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  619  cat /root/project/druid/examples/conf/druid/cluster/data/middleManager/runtime.properties
+  620  cat /root/project/druid/examples/conf/druid/cluster/master/coordinator-overlord/runtime.properties
+  621  ls
+  622  ls -lrt
+  623  cat  wikipedia-index.json
+  624  bin/dsql
+  625  cd ../
+  626  ls
+  627  cd ../
+  628  ls -lrt
+  629  bin/dsql
+  630  bin/post-index-task --file quickstart/tutorial/wikipedia-index.json --url http://localhost:8081
+  631  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  632  cat /root/project/druid/distribution/docker/docker-compose.yml
+  633  pwd
+  634  cd ..
+  635  pwd
+  636  ls
+  637  ls -lrt
+  638  pwd
+  639  echo $PATH
+  640  echo $JAVA_HOME
+  641  java -version
+  642  java 
+  643  ls
+  644  ls -lrt
+  645  pwd
+  646  cd 
+  647  ls -lrt
+  648  cd project/druid
+  649  ls -lrt
+  650  cd distribution
+  651  ls -lrt
+  652  cd bin
+  653  ls
+  654  ls -lrt
+  655  cd ../src
+  656  ls -lrt
+  657  cd ../docker
+  658  ls -lrt
+  659  cat environment
+  660  vi environment
+  661  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  662  cat /root/project/druid/distribution/docker/docker-compose.yml
+  663  pwd
+  664  cat environment
+  665  ping den-dev-kafka5-01.ch.int
+  666  host den-dev-kafka5-01.ch.int
+  667  ping 10.11.80.178
+  668  ping den-dev-kafka5-02.ch.int
+  669  den-dev-kafka5-03.ch.int
+  670  ping den-dev-kafka5-03.ch.int
+  671  pwd
+  672  cd /opt/apache-druid-0.17.0/quickstart/tutorial
+  673  pwd
+  674  cd ../../
+  675  pwd
+  676  ls -lrt
+  677  cd examples/
+  678  ls
+  679  pwd
+  680  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  681  ls -lrt
+  682  cd project/druid/examples/
+  683  pwd
+  684  ls
+  685  ./bin/start-micro-quickstart
+  686  export DRUID_SKIP_JAVA_CHECK=1
+  687  ./bin/start-micro-quickstart
+  688  java
+  689  docker ps
+  690  jave --version
+  691  java --version
+  692  docker ps
+  693  telnet den-dev-kafka5-01 9092
+  694  nslookup den-druid01
+  695  locate
+  696  locate java
+  697  which java
+  698  nslookup den-druid01
+  699  telnet den-nonprodphi-kafka5-01 9092
+  700  find / -name "jav=a*
+  701  find / -name "java*
+  702  find / -name *java*
+  703  find / -name *java* |more
+  704  cd /root/project/druid/extensions-core/druid-kerberos/src/test/java
+  705  ls -ltr
+  706  cd org
+  707  ls -ltr
+  708  cd *
+  709  ls -ltr
+  710  cd *
+  711  ls -ltr
+  712  te
+  713  telnet den-nonprodphi-kafka5-01 9092
+  714  telnet den-nonprodphi-kafka5-02 9092
+  715  telnet den-nonprodphi-kafka5-03 9092
+  716  telnet den-nonprodphi-kafka5-04 9092
+  717  telnet den-nonprodphi-kafka5-05 9092
+  718  telnet den-nonprodphi-kafka5-06 9092
+  719  telnet den-nonprodphi-kafka5-07 9092
+  720  docker ps
+  721  docker exec -ti d1fd07780992 /bin/bash
+  722  which bash
+  723  docker exec -ti d1fd07780992 /usr/bin/bash
+  724  exit
+  725  docker ps
+  726  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  727  cd project/druid
+  728  pwd
+  729  cd distribution/
+  730  ls
+  731  cd doc
+  732  cd docker/
+  733  ls
+  734  vi environment
+  735  cat environment
+  736  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  737  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  738  vi environment
+  739  cat environment
+  740  pwd
+  741  cat environment
+  742  cd /root/project/druid/distribution/docker
+  743  ls
+  744  cat environment
+  745  vi environment
+  746  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  747  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  748  cat environment
+  749  pwd
+  750  ls -lrt
+  751  cat docker-compose.yml
+  752  cat environment
+  753  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  754  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  755  docker ps
+  756  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  757  vi environment
+  758  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  759  ls
+  760  cat v
+  761  cat druid.sh
+  762  echo $COMMON_CONF_DIR
+  763  cat environment
+  764  docker ps
+  765  cat druid.sh
+  766  ls
+  767  ls -lrt
+  768  cat docker-compose.yml
+  769  cp docker-compose.yml docker-compose_old.yml
+  770  ls -lrt
+  771  cd project/druid/distribution/docker/
+  772  ls
+  773  cat environment
+  774  exit
+  775  cat conf/druid/_common/common.runtime.properties
+  776  find / +name _common/common.runtime.properties
+  777  find / name _common/common.runtime.properties
+  778  find / name _common/common.runtime.propertiesfind / -name *_common/common.runtime.properties
+  779  find / -name *common.runtime.properties
+  780  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  781  curl http://localhost:8081/subjects/Kafka-key/versions
+  782  curl -X GET http://localhost:8081/subjects
+  783  telnet den-nonprodphi-kafka5-01
+  784  telnet den-nonprodphi-kafka5-01 8081
+  785  ping den-druid01
+  786  exit
+  787  ping den-nonprodphi-kafka5-01.ch.int:8081
+  788  ping den-nonprodphi-kafka5-01.ch.int:9092
+  789  ping den-nonprodphi-kafka5-01.ch.int
+  790  ping 10.11.30.67:8081
+  791  telnet 10.11.30.67:8081
+  792  nmap 10.11.30.67 -p 8081
+  793  pwd
+  794  telnet 10.11.30.67 8081
+  795  telnet 10.11.30.67 9092
+  796  telnet den-nonprodphi-kafka5-01 8081
+  797  telnet den-nonprodphi-kafka5-01 8080
+  798  telnet den-nonprodphi-kafka5-01 8081
+  799  telnet den-nonprodphi-kafka5-02 8081
+  800  exit
+  801  cd project/druid/
+  802  ls
+  803  ls -lrt
+  804  cd distribution
+  805  ls -lrt
+  806  cd docker/
+  807  cat environment 
+  808  ls -lrt
+  809  cat docker-compose.yml
+  810  cat environment 
+  811  docker ps
+  812  cd project/druid/distribution/
+  813  ls
+  814  cd docker/
+  815  ls -lrt
+  816  cat environment
+  817  ls -lrt
+  818  cat docker-compose.yml
+  819  telnet den-nonprodphi-kafka5-01 8081
+  820  telnet den-nonprodphi-kafka5-01 8080
+  821  telnet den-nonprodphi-kafka5-01 8081
+  822  cp /dev/null  /var/spool/mail/root
+  823  telnet den-nonprodphi-kafka5-01 8081
+  824  telnet den-nonprodphi-kafka5-02 8081
+  825  telnet den-nonprodphi-kafka5-03 8081
+  826  telnet den-nonprodphi-kafka5-04 8081
+  827  telnet den-nonprodphi-kafka5-05 8081
+  828  telnet den-nonprodphi-kafka5-06 8081
+  829  telnet den-nonprodphi-kafka5-07 8081
+  830  exit
+  831  telnet den-nonprodphi-kafka5-07 8081
+  832  telnet den-nonprodphi-kafka5-01 8081
+  833  telnet den-nonprodphi-kafka5-02 8081
+  834  telnet den-nonprodphi-kafka5-03 8081
+  835  telnet den-nonprodphi-kafka5-04 8081
+  836  telnet den-nonprodphi-kafka5-05 8081
+  837  telnet den-nonprodphi-kafka5-06 8081
+  838  telnet den-nonprodphi-kafka5-07 8081
+  839  telnet den-nonprodphi-kafka5-07 8080
+  840  telnet den-nonprodphi-kafka5-01 8080
+  841  exit
+  842  history
+  843  history > /tmp/druid_setup_history.txt
+  844  cd /tmp
+  845  ls -ltr
+  846  chmod 777 druid_setup_history.txt
+  847  ls -ltr
+  848  mv druid_setup_history.txt /home/beong/.
+  849  cd /home
+  850  ls -ltr
+  851  ls -ltr *beong*
+  852  cd beong-local
+  853  ls -ltr
+  854  cat *
+  855  ls -ltr
+  856  mv /tmp/*txt .
+  857  ls -ltr
+  858  cd ..
+  859  ls -ltr
+  860  cd beong-local
+  861  ls -ltr
+  862  cd ..
+  863  chmod 755 beong-local
+  864  cd  beong-local
+  865  ls -ltr
+  866  less  druid_setup_history.txt
+  867  systemctl status docker
+  868  docker ps
+  869  less  druid_setup_history.txt
+  870   systemctl show --property=Environment docker
+  871  less  druid_setup_history.txt
+  872  systemctl restart docker
+  873  docker ps
+  874  less  druid_setup_history.txt
+  875  systemctl status docker
+  876  docker ps
+  877  less  druid_setup_history.txt
+  878  systemctl reload docker
+  879  docker ps
+  880  less druid_setup_history.txt
+  881  cd
+  882  clear
+  883  docker-compose up -d
+  884  find / -name start-micro-quickstart
+  885  cd /root/project/druid/examples/
+  886  ls -ltr
+  887  cd bin
+  888  ls -ltr
+  889  cd ..
+  890  ./bin/start-micro-quickstart
+  891  export DRUID_SKIP_JAVA_CHECK=1
+  892  ./bin/start-micro-quickstart
+  893  docker -ps
+  894  docker ps
+  895  docker-compose up -d
+  896  service docker restart
+  897  docker ps
+  898  systemctl start druid
+  899  docker ps
+  900  service druid-broker start
+  901  cd /root/project/druid/examples/bin/
+  902  su - drout 
+  903  docker-compose up
+  904  find / -name docker-compose.y"*"
+  905  docker-compose up /root/project/druid/distribution/docker/docker-compose.yml
+  906  cat /root/project/druid/distribution/docker/docker-compose.yml
+  907  cd /root/project/druid/distribution/docker/docker-compose.yml
+  908  cd /root/project/druid/distribution/docker/
+  909  ls -ltr
+  910  pwd
+  911  docker-compose up -d
+  912  docker ps
+  913  pwd
+  914  cd
+  915  vi .bashrc
+  916  source .bashrc
+  917  service restart docker
+  918  docker ps
+  919  systemctl restart docker 
+  920  docker ps
+  921  alias 
+  922  druid-up
+  923  docker ps
+  924  cd
+  925  vi .bashrc
+  926  source .bashrc
+  927  ls -ltr
+  928  alias 
+  929  vi .bashrc
+  930  source .bashrc
+  931  alias 
+  932  exit
+  933  alias
+  934  docker_restart
+  935  docker ps
+  936  druid_up
+  937  docker ps
+  938  exit
+  939  history |grep telnet
+  940  telnet den-nonprodphi-kafka5-01 8081
+  941  telnet den-nonprodphi-kafka5-02 8081
+  942  telnet den-nonprodphi-kafka5-03 8081
+  943  telnet den-nonprodphi-kafka5-04 8081
+  944  telnet den-nonprodphi-kafka5-05 8081
+  945  telnet den-nonprodphi-kafka5-06 8081
+  946  telnet den-nonprodphi-kafka5-07 8081
+  947  netstat -tanp |grep 8081
+  948  vi /etc/hosts
+  949  iplist
+  950  telnet den-nonprodphi-kafka5-07 8081
+  951  netstat -tanp |grep 8081
+  952  docker ps
+  953  alias 
+  954  docker_restart
+  955  docker ps
+  956  druid_up
+  957  docker ps
+  958  telnet den-nonprodphi-kafka5-07 8081
+  959  telnet den-nonprodphi-kafka5-01 8081
+  960  docker ps
+  961  exit
+  962  telnet den-nonprodphi-kafka5-01 8081
+  963  telnet den-nonprodphi-kafka5-02 8081
+  964  pwd
+  965  docker ps
+  966  docker logs middlemanager
+  967  docker ps
+  968  docker logs historical
+  969  docker logs broker
+  970  docker ps
+  971  docker logs coordinator
+  972  docker ps
+  973  docker logs middlemanager
+  974  docker ps
+  975  docker logs middlemanager
+  976  cd var/druid/task/index_kafka_questionnaireservice_denpreprod.questionnaireservice_denpreprod.covid_19_rtw_assessment_result_outcomes_38b96cf346e10b5_ecnipigp/log
+  977  docker ps
+  978  docker exec -it middlemanager sh
+  979  docker ps
+  980  pwd
+  981  cd project/druid/
+  982  ls -1
+  983  cd distribution/
+  984  ls -a
+  985  cd docker/
+  986  ls -a
+  987  cd storage/
+  988  ls -a
+  989  cd ..
+  990  docker ps
+  991  cd project/druid/distribution/
+  992  cd docker
+  993  ls -lrt
+  994  pwd
+  995  cat docker-compose.yml
+  996  cat environment
+  997  docker ps
+  998  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  999  docker ps
+ 1000  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml start
+ 1001  docker ps
+ 1002  ls
+ 1003  cd project/
+ 1004  ls
+ 1005  cd druid/
+ 1006  ls
+ 1007  ip a
+ 1008  free -h
+ 1009  ping google.com
+ 1010  history 
+[root@den-druid01 druid]# cd project/druid/distribution/
+-bash: cd: project/druid/distribution/: No such file or directory
+[root@den-druid01 druid]# cd distribution/
+[root@den-druid01 distribution]# ls
+asf-release-process-guide.md  bin  docker  pom.xml  src
+[root@den-druid01 distribution]# cat docker/docker-compose.yml 
+[root@den-druid01 distribution]# cat docker/docker-compose.yml 
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+#
+version: "2.2"
+
+volumes:
+  metadata_data: {}
+  middle_var: {}
+  historical_var: {}
+  broker_var: {}
+  coordinator_var: {}
+  router_var: {}
+
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    volumes:
+      - metadata_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=FoolishPassword
+      - POSTGRES_USER=druid
+      - POSTGRES_DB=druid
+
+  # Need 3.5 or later for container nodes
+  zookeeper:
+    container_name: zookeeper
+    image: zookeeper:3.5
+    environment:
+      - ZOO_MY_ID=1
+
+  coordinator:
+    image: apache/druid:0.19.0
+    container_name: coordinator
+    volumes:
+      - ./storage:/opt/data
+      - coordinator_var:/opt/druid/var
+    depends_on: 
+      - zookeeper
+      - postgres
+    ports:
+      - "8081:8081"
+    command:
+      - coordinator
+    env_file:
+      - environment
+
+  broker:
+    image: apache/druid:0.19.0
+    container_name: broker
+    volumes:
+      - broker_var:/opt/druid/var
+    depends_on: 
+      - zookeeper
+      - postgres
+      - coordinator
+    ports:
+      - "8082:8082"
+    command:
+      - broker
+    env_file:
+      - environment
+
+  historical:
+    image: apache/druid:0.19.0
+    container_name: historical
+    volumes:
+      - ./storage:/opt/data
+      - historical_var:/opt/druid/var
+    depends_on: 
+      - zookeeper
+      - postgres
+      - coordinator
+    ports:
+      - "8083:8083"
+    command:
+      - historical
+    env_file:
+      - environment
+
+  middlemanager:
+    image: apache/druid:0.19.0
+    container_name: middlemanager
+    volumes:
+      - ./storage:/opt/data
+      - middle_var:/opt/druid/var
+    depends_on: 
+      - zookeeper
+      - postgres
+      - coordinator
+    ports:
+      - "8091:8091"
+    command:
+      - middleManager
+    env_file:
+      - environment
+
+  router:
+    image: apache/druid:0.19.0
+    container_name: router
+    volumes:
+      - router_var:/opt/druid/var
+    depends_on:
+      - zookeeper
+      - postgres
+      - coordinator
+    ports:
+      - "8888:8888"
+    command:
+      - router
+    env_file:
+      - environment
+You have mail in /var/spool/mail/root
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:50:56:be:b4:83 brd ff:ff:ff:ff:ff:ff
+    inet 10.11.21.226/24 brd 10.11.21.255 scope global eth0
+       valid_lft forever preferred_lft forever
+3: br-0b30c2d5a442: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default 
+    link/ether 02:42:0f:ee:1a:a0 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 scope global br-0b30c2d5a442
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:00:3b:68:a1 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 scope global docker0
+       valid_lft forever preferred_lft forever
+272: veth21b7404@if271: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether ce:d8:b1:d9:12:e4 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+274: veth5331400@if273: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 92:60:fd:a4:5d:ca brd ff:ff:ff:ff:ff:ff link-netnsid 0
+276: vethe0eb56f@if275: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 66:82:21:2a:bd:24 brd ff:ff:ff:ff:ff:ff link-netnsid 3
+278: veth83b71f4@if277: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether fe:96:fe:55:d8:d0 brd ff:ff:ff:ff:ff:ff link-netnsid 4
+280: veth00903c5@if279: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 56:da:e5:86:f2:36 brd ff:ff:ff:ff:ff:ff link-netnsid 6
+282: veth8578f34@if281: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 12:c1:3e:96:a7:db brd ff:ff:ff:ff:ff:ff link-netnsid 5
+284: veth358a02d@if283: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-0b30c2d5a442 state UP group default 
+    link/ether 5e:6e:7b:1d:ad:68 brd ff:ff:ff:ff:ff:ff link-netnsid 7
+You have mail in /var/spool/mail/root
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# free -h
+              total        used        free      shared  buff/cache   available
+Mem:            31G         16G        981M        1.6G         14G         13G
+Swap:            0B          0B          0B
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# 
+[root@den-druid01 distribution]# pwd
+/root/project/druid/distribution
+You have mail in /var/spool/mail/root
+[root@den-druid01 distribution]# ls
+asf-release-process-guide.md  bin  docker  pom.xml  src
+[root@den-druid01 distribution]# cd docker/
+[root@den-druid01 docker]# ls
+Dockerfile         Dockerfile.mysql  docker-compose.yml         docker-compose_old.yml  environment
+Dockerfile.java11  README.md         docker-compose_0_17.0.yml  druid.sh                storage
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                    NAMES
+6ba61bce8a2c        apache/druid:0.19.0   "/druid.sh router"       3 weeks ago         Up 5 days           0.0.0.0:8888->8888/tcp                   router
+0345fec02444        apache/druid:0.19.0   "/druid.sh historical"   3 weeks ago         Up 5 days           0.0.0.0:8083->8083/tcp                   historical
+63468e7041b7        apache/druid:0.19.0   "/druid.sh broker"       3 weeks ago         Up 5 days           0.0.0.0:8082->8082/tcp                   broker
+b5af31aeaa4d        apache/druid:0.19.0   "/druid.sh middleM..."   3 weeks ago         Up 5 days           0.0.0.0:8091->8091/tcp                   middlemanager
+629ab1a09fe8        apache/druid:0.19.0   "/druid.sh coordin..."   3 weeks ago         Up 5 days           0.0.0.0:8081->8081/tcp                   coordinator
+81060b79576d        postgres:latest       "docker-entrypoint..."   2 months ago        Up 5 days           5432/tcp                                 postgres
+c7921b38f2db        zookeeper:3.5         "/docker-entrypoin..."   2 months ago        Up 5 days           2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   zookeeper
+[root@den-druid01 docker]# 
+You have mail in /var/spool/mail/root
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# docker ps^C
+[root@den-druid01 docker]# ipv4^C
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                    NAMES
+6ba61bce8a2c        apache/druid:0.19.0   "/druid.sh router"       3 weeks ago         Up 5 days           0.0.0.0:8888->8888/tcp                   router
+0345fec02444        apache/druid:0.19.0   "/druid.sh historical"   3 weeks ago         Up 5 days           0.0.0.0:8083->8083/tcp                   historical
+63468e7041b7        apache/druid:0.19.0   "/druid.sh broker"       3 weeks ago         Up 5 days           0.0.0.0:8082->8082/tcp                   broker
+b5af31aeaa4d        apache/druid:0.19.0   "/druid.sh middleM..."   3 weeks ago         Up 5 days           0.0.0.0:8091->8091/tcp                   middlemanager
+629ab1a09fe8        apache/druid:0.19.0   "/druid.sh coordin..."   3 weeks ago         Up 5 days           0.0.0.0:8081->8081/tcp                   coordinator
+81060b79576d        postgres:latest       "docker-entrypoint..."   2 months ago        Up 5 days           5432/tcp                                 postgres
+c7921b38f2db        zookeeper:3.5         "/docker-entrypoin..."   2 months ago        Up 5 days           2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   zookeeper
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# #docker resttart 6ba61bce8a2c
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# docker ^C
+[root@den-druid01 docker]# history 
+   24  history 
+   25  cat /proc/sys/net/ipv4/ip_forward
+   26  sysctl net.ipv6.conf.all.disable_ipv6=1
+   27  sysctl net.ipv4.ip_forward net.ipv4.ip_forward = 0
+   28  sysctl -w net.ipv4.conf.all.forwarding=1
+   29  docker ps -a
+   30  clh-sourdough-disable --disable
+   31  systemctl status docker
+   32  cd project/druid/
+   33  ls
+   34  cd distribution/docker/
+   35  ls
+   36  docker-compose up -d
+   37  netstat -plant | grep 8888
+   38  cat /proc/sys/net/ipv4/ip_forward
+   39  systemctl status docker
+   40  docker ps
+   41  cat /proc/sys/net/ipv4/ip_forward
+   42  sysctl net.ipv4.conf.all.forwarding=1
+   43  systemctl restart docker
+   44  docker-compose up -d
+   45  docker ps
+   46  docker ps -a
+   47  docker ps
+   48  netstat -plat | grep 8888
+   49  docker-compose up -d
+   50  docker ps
+   51  netstat -plat | grep 8888
+   52  docker ps
+   53  netstat -plat | grep 8888
+   54  netstat -plannt | grep 8888
+   55  docker ps
+   56  cat /etc/docker/daemon.json 
+   57  cat /etc/sysctl.conf 
+   58  vi /etc/sysctl.conf 
+   59  netstat -plannt | grep 8888
+   60  vi Edit /etc/docker/daemon.json and set the ipv6 key to true.
+   61  vi /etc/docker/daemon.json
+   62  service docker restart
+   63  netstat -antup |grep 8888
+   64  ls -ltr
+   65  ps -ef |grep druid
+   66  ls -ltr
+   67  cd /tmp
+   68  ls -tlr
+   69  cd druid
+   70  ls -ltr
+   71  df -h
+   72  cd tmp
+   73  cd /tmp
+   74  ls -ltr
+   75  df -h
+   76  ls -tlr
+   77  cd druid
+   78  ls -tlr
+   79  ps -ef |grep druid
+   80  ps -ef |grep postgres
+   81  ls -tlr
+   82  date
+   83  cd /tmp
+   84  ls -ltr
+   85  telnet den-nonprodphi-kafka5-01 9092
+   86  ping den-nonprodphi-kafka5-01
+   87  ps -ef|grep druid
+   88  cd conf
+   89  cd 
+   90  cd /usr/local
+   91  ls -ltr
+   92  cd ..
+   93  ls -ltr
+   94  cd /opt
+   95  ls -ltr
+   96  which driud
+   97  locate druid
+   98  cd 
+   99  ls -ltr
+  100  cd project
+  101  ls -tlr
+  102  cd *
+  103  ls -ltr
+  104  cd conf
+  105   cat README.md
+  106  less  README.md
+  107  df -h
+  108   cat /etc/fstab
+  109  docker ps
+  110  docker --?
+  111  docker ps
+  112  docker attach 1e71673de3d7
+  113  exit
+  114  cd .ssh/
+  115  ls
+  116  cat authorized_keys 
+  117  vi authorized_keys 
+  118  w
+  119  tail /var/log/secure
+  120  w
+  121  tail -f /var/log/secure
+  122  cd .ssh/
+  123  ls
+  124  cat authorized_keys 
+  125  clh-sourdough-disable --disable
+  126  vi authorized_keys 
+  127  cat authorized_keys 
+  128  ps -ef | grep soudh
+  129  vi /etc/ssh/sshd_config 
+  130  ls
+  131  ls -l
+  132  vi authorized_keys2
+  133  ls -l
+  134  chown 600 authorized_keys2 
+  135  ls -l
+  136  chown 600 authorized_keys2 
+  137  ls -l
+  138  systemctl restart sshd
+  139  sourdough-starter 
+  140  cat /etc/sysctl.conf 
+  141  history 
+  142  exit
+  143  ls -l
+  144  ls -R conf
+  145  cd project
+  146  ls -l
+  147  cd druid
+  148  ls -r
+  149  ls -R conf
+  150  cat .ssh/authorized_keys
+  151  vi .ssh/authorized_keys
+  152  vi .ssh/authorized_keys2 
+  153  w
+  154  last
+  155  ps -ef |grep druid
+  156  cd /tmp
+  157  ls -ltr
+  158  cd druid
+  159  ls -ltr
+  160  cd /opt
+  161  ls -ltr
+  162  cd /usr/
+  163  ls -ltr
+  164  cd ..
+  165  history 
+  166  cat /etc/docker/daemon.json
+  167  cat /etc/sysconfig/docker-network
+  168  cat /lib/systemd/system/docker.service
+  169  cat /etc/systemd/system/docker.service.d/http-proxy.conf 
+  170  df -Th
+  171  cd /tmp
+  172  ls -ltr
+  173  docker ps
+  174  df -h
+  175  exit
+  176  cd /home
+  177  ls -ltr
+  178  ls -ltr |grep rkumar
+  179  exit
+  180  passwd 
+  181  bin/dsql
+  182  ls -lrt
+  183  cd project
+  184  ls
+  185  cd druid/
+  186  ls -lrt
+  187  bin/dsql
+  188  w
+  189  last
+  190  cd .ssh/
+  191  ls
+  192  cat authorized_keys2 
+  193  cat /etc/ssh/sshd_config | grep key
+  194  vi authorized_keys2 
+  195  cat authorized_keys2 
+  196  vi authorized_keys2 
+  197  w
+  198  tail   -f /var/log/secure
+  199  vi /etc/ssh/sshd_config 
+  200  vi authorized_keys2 
+  201  vi /etc/ssh/sshd_config 
+  202  systemctl restart sshd
+  203  systemctl status sshd
+  204  ls
+  205  cd project/
+  206  ls
+  207  cd druid/
+  208  ls
+  209  cd dev
+  210  ls
+  211  cd ..
+  212  ls -lrt
+  213  cd examples
+  214  ls -lrt
+  215  cd quickstart
+  216  ls -lrt
+  217  cd tutorial/
+  218  ls
+  219  ls -lrt
+  220  pwd
+  221  cd ../
+  222  cd ..
+  223  ls
+  224  ls -lrt
+  225  bin/dsql
+  226  pwd
+  227  ps -ef
+  228  ls -lrt
+  229  cd quickstart
+  230  ls
+  231  cd quickstart
+  232  cd ../
+  233  ls
+  234  ls -lrt
+  235  cat quickstart/tutorial/updates-init-index.json
+  236  bin/post-index-task --file quickstart/tutorial/updates-init-index.json --url http://localhost:8081
+  237  ls -lrt
+  238  ./bin/start-micro-quickstart
+  239  export DRUID_SKIP_JAVA_CHECK=1
+  240  ./bin/start-micro-quickstart
+  241  losf -i 8081
+  242  losf -i tcp:8081
+  243  lssof -i tcp:8081
+  244  lsof -i tcp:8081
+  245  bin/post-index-task --file quickstart/tutorial/updates-init-index.json --url http://localhost:8888
+  246  ls
+  247  cd quickstart/
+  248  ls
+  249  cd tutorial/
+  250  ls -lrt
+  251  cat updates-data.json
+  252  pwd
+  253  cp updates-data.json ../updates-data.json
+  254  cd ../
+  255  ls
+  256  mv  updates-data.json ../
+  257  ls
+  258  cd ../
+  259  ls
+  260  mv updates-data.json ../
+  261  ls
+  262  cd ../
+  263  ls
+  264  mv updates-data.json ../
+  265  cd ../
+  266  ls
+  267  mv updates-data.json ../
+  268  ls
+  269  cd ../
+  270  ls
+  271  pwd
+  272  ls -lrt
+  273  chmod 777 updates-data.json
+  274  pwd
+  275  cat updates-data.json
+  276  cd /root/project/druid/examples/quickstart/tutorial
+  277  ls
+  278  ls -lrt
+  279  cat updates-append-index.json
+  280  cd
+  281  ls
+  282  cat updates-data.json
+  283  pwd
+  284  ps -ef |grep *start-micro-quickstart*
+  285  ps -ef |grep start-micro-quickstart
+  286  ps -ef |grep start
+  287  ls
+  288  cd project/druid/
+  289  ls
+  290  ls -lrt
+  291  cd extensions-core
+  292  ls
+  293  ls -lrt
+  294  cd ../
+  295  cd project/druid/
+  296  ls
+  297  cd examples/
+  298  ls
+  299  bin/dsql
+  300  pwd
+  301  systemctl status druid
+  302  sudo service druid-broker status
+  303  service druid-broker status
+  304  bin/systemctl status druid-broker.service
+  305  ps -ef |grep druid
+  306  uptime
+  307  cd /etc
+  308  ls -ltr
+  309  cd /home
+  310  ls -ltr
+  311  cd rkumar
+  312  cd
+  313  ls -ltr
+  314  find / -name start-micro-quickstart
+  315  cd /root/project/druid/examples/bin/
+  316  ls -ltr  start-micro-quickstart
+  317  cat  start-micro-quickstart
+  318  echo $WHEREAMI
+  319  docker ps
+  320  cd /home
+  321  ls -ltr rakumar
+  322  ls -ltr
+  323  last |more
+  324  docker ps
+  325  su - drout 
+  326  docker exec 6310cfffa360
+  327  docker exec -it 6310cfffa360
+  328  cd /
+  329  ls 0ltr
+  330  ls -ltr
+  331  cd /etc
+  332  ls -ltr
+  333  cd sudoers.d
+  334  ls -ltr
+  335  cat  20_iac_sudo_enabled
+  336  vi  20_iac_sudo_enabled
+  337  docker ps
+  338  find / -name druid.sh
+  339  cd /root/project/druid/distribution/docker/
+  340  ls -ltr 
+  341  cat druid.sh
+  342  cd
+  343  vi .bashrc
+  344  docker ps
+  345  cd /home/beong/
+  346  cd /home
+  347  ls -ltr
+  348  cd beong-local
+  349  ls -ltr
+  350  vi druid_docker.txt
+  351  ls -ltr
+  352  cat *
+  353  cd 
+  354  ls -ltr
+  355  cd -
+  356  ls -ltr
+  357  vi dri*
+  358  vi drui*txt
+  359  docker exec -it e2bf86e068e7
+  360  docker exec -it e2bf86e068e7 /bin/bash
+  361  docker ps
+  362  docker exec -it 6663ea0327a0  /bin/bash
+  363  cd
+  364  cd -
+  365  ls -ltr
+  366  vi druid_docker.txt
+  367  pwd
+  368  cp druid_docker.txt  /tmp/.
+  369  cat druid_docker.txt
+  370  rm -f /tmp/*txt
+  371  ls ltr
+  372  ls -ltr /tmp
+  373  docker ps
+  374  systemctl status docker
+  375  exit
+  376  cd /home
+  377  ls -ltr |more
+  378   
+  379  cd ..
+  380  docker ps
+  381  cd /etc/systemd/system
+  382  pwd
+  383  ls -ltr
+  384  cd docker.service.d
+  385  ls -ltr
+  386  cat http-proxy.conf
+  387  pwd
+  388  ls -ltr
+  389  cat http-proxy.conf
+  390  docker ps
+  391  ls -lrt
+  392  cd project
+  393  ls
+  394  cd druid/
+  395  ls
+  396  ls -lrt
+  397  history 
+  398  cat /etc/systemd/system/docker.service.d/http-proxy.conf 
+  399  cat /etc/docker/daemon.json
+  400  find / -name *runtime*
+  401  find / -name *runtime* |more
+  402  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  403  ls -ltr
+  404  exit
+  405  docker ps
+  406  ls
+  407  grep docker
+  408  druid.extensions.loadList=["postgresql-metadata-storage", "druid-hdfs-storage"]
+  409  find / -name *.yml
+  410  ls -lrt
+  411  cd project
+  412  ls -lrt
+  413  cd druid
+  414  ls -lrt
+  415  cd extensions-core
+  416  ls -lrt
+  417  cd kafka-indexing-service
+  418  ls -lrt
+  419  cat pom.xml
+  420  cd src/
+  421  ls
+  422  cd ../
+  423  ls
+  424  cd ../
+  425  ls -lrt
+  426  pwd
+  427  cat /root/project/druid/distribution/docker/docker-compose.yml
+  428  cd ../
+  429  ls
+  430  ls -lrt
+  431  find / -name *runtime*
+  432  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  433  docker ps
+  434  cd project/druid/
+  435  ls
+  436  cd examples/
+  437  ls
+  438  ls -lrt
+  439  cd quickstart
+  440  ls
+  441  cd ../
+  442  cd conf
+  443  ls
+  444  cd druid/
+  445  ls
+  446  cat cat /root/project/druid/distribution/docker/docker-compose.yml
+  447  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  448  docker ps
+  449  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  450  docker ps
+  451  cd /root/project/druid/
+  452  ls
+  453  cd distribution
+  454  ls -lrt
+  455  cd bin
+  456  ls
+  457  ls -lrt
+  458  cd
+  459  ls -lrt
+  460  mv updates-data.json /project/druid/
+  461  pwd
+  462  ls
+  463  mv updates-data.json /project/druid
+  464  cd project
+  465  cd druid
+  466  ls
+  467  pwd
+  468  cd
+  469  pwd
+  470  mv updates-data.json /root/project/druid/
+  471  find / -name *common.runtime.properties
+  472  pwd
+  473  cd project
+  474  cd druid/
+  475  ls -lrt
+  476  cd extensions-core
+  477  ls -lrt
+  478  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  479  /opt/apache-druid-0.17.0
+  480  pwd
+  481  cd ../
+  482  ls -lrt
+  483  find / -name */opt/apache-druid-0.17.0*
+  484  find / -name */opt/*
+  485  ls
+  486  cat cat /root/project/druid/distribution/docker/docker-compose.yml
+  487  pwd
+  488  ls
+  489  ls -lrt
+  490  cd distribution
+  491  ls
+  492  cd docker/
+  493  ls
+  494  ls -lrt
+  495  cd storage
+  496  ls -lrt
+  497  cd ../
+  498  ls
+  499  cd bin
+  500  ls
+  501  cd ../
+  502  ls
+  503  ls -lrt
+  504  docker ps
+  505  docker images
+  506  pwd
+  507  ls -lrt
+  508  cd extensions-core
+  509  ls
+  510  ls -lrt
+  511  cd ../
+  512  cd examples/
+  513  ls
+  514  cd ../
+  515  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  516  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  517  docker ps
+  518  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  519  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up
+  520  docker ps
+  521  pwd
+  522  ls
+  523  cd distribution
+  524  ls
+  525  cd docker
+  526  ls
+  527  cd ../
+  528  ls -lrt
+  529  cd ../
+  530  ls
+  531  ls -lrt
+  532  cd extensions-contrib
+  533  ls
+  534  ls -lrt
+  535  cd ../
+  536  ls -lrt
+  537  cp extensions-core extensions
+  538  ls -lrt
+  539  mkdir extensions
+  540  cp extensions-core/* extensions/
+  541  cd extensions-core
+  542  ls
+  543  ls -lrt
+  544  cd ../
+  545  cp -a /extensions-core/. /extensions
+  546  cp -a /extensions-core/. /extensions/
+  547  ls
+  548  ls -lrt
+  549  cp -r ~/extensions-core/. ~/extensions
+  550  ls extensions/
+  551  cd extensions
+  552  ls
+  553  cd ../
+  554  cp extensions-core extensions
+  555  sudo cp -R extensions-core extensions
+  556  cd extensions
+  557  ls
+  558  cd extensions-core
+  559  ls
+  560  cd ../
+  561  rm -r extensions-core
+  562  ls
+  563  cd extensions-core/
+  564  ls
+  565  cd ../
+  566  rm -d  extensions-core
+  567  rm -r  extensions-core
+  568  rm -rf extensions-core
+  569  ls
+  570  cd ../
+  571  ls
+  572  ls -lrt
+  573  sudo cp -R extensions-core/* extensions/
+  574  cd extensions
+  575  ls -lrt
+  576  cd ../
+  577  ls -lrt
+  578  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  579  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  580  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up 
+  581  docker ps
+  582  pwd
+  583  cd distribution/
+  584  ls
+  585  cd bin
+  586  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  587  pwd
+  588  cd ../../
+  589  ls
+  590  cd extensions/
+  591  ls
+  592  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  593  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  594  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  595  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  596  cat cat /root/project/druid/distribution/docker/docker-compose.yml
+  597  find / -name *apache/druid:0.17.0*
+  598  cd ../
+  599  pwd
+  600  ls
+  601  cd examples
+  602  ls
+  603  cd quickstart/
+  604  ls
+  605  cd tutorial/
+  606  ls
+  607  ls -lrt
+  608  pwd
+  609  find / -name *runtime.properties
+  610  cat /root/project/druid/examples/conf/druid/cluster/master/coordinator-overlord/runtime.properties
+  611  cat /root/project/druid/examples/conf/druid/cluster/data/middleManager/runtime.properties
+  612  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  613  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  614  cat /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  615  vi /root/project/druid/examples/conf/druid/cluster/data/middleManager/runtime.properties
+  616  vi /root/project/druid/examples/conf/druid/cluster/master/coordinator-overlord/runtime.properties
+  617  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  618  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  619  cat /root/project/druid/examples/conf/druid/cluster/data/middleManager/runtime.properties
+  620  cat /root/project/druid/examples/conf/druid/cluster/master/coordinator-overlord/runtime.properties
+  621  ls
+  622  ls -lrt
+  623  cat  wikipedia-index.json
+  624  bin/dsql
+  625  cd ../
+  626  ls
+  627  cd ../
+  628  ls -lrt
+  629  bin/dsql
+  630  bin/post-index-task --file quickstart/tutorial/wikipedia-index.json --url http://localhost:8081
+  631  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  632  cat /root/project/druid/distribution/docker/docker-compose.yml
+  633  pwd
+  634  cd ..
+  635  pwd
+  636  ls
+  637  ls -lrt
+  638  pwd
+  639  echo $PATH
+  640  echo $JAVA_HOME
+  641  java -version
+  642  java 
+  643  ls
+  644  ls -lrt
+  645  pwd
+  646  cd 
+  647  ls -lrt
+  648  cd project/druid
+  649  ls -lrt
+  650  cd distribution
+  651  ls -lrt
+  652  cd bin
+  653  ls
+  654  ls -lrt
+  655  cd ../src
+  656  ls -lrt
+  657  cd ../docker
+  658  ls -lrt
+  659  cat environment
+  660  vi environment
+  661  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  662  cat /root/project/druid/distribution/docker/docker-compose.yml
+  663  pwd
+  664  cat environment
+  665  ping den-dev-kafka5-01.ch.int
+  666  host den-dev-kafka5-01.ch.int
+  667  ping 10.11.80.178
+  668  ping den-dev-kafka5-02.ch.int
+  669  den-dev-kafka5-03.ch.int
+  670  ping den-dev-kafka5-03.ch.int
+  671  pwd
+  672  cd /opt/apache-druid-0.17.0/quickstart/tutorial
+  673  pwd
+  674  cd ../../
+  675  pwd
+  676  ls -lrt
+  677  cd examples/
+  678  ls
+  679  pwd
+  680  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  681  ls -lrt
+  682  cd project/druid/examples/
+  683  pwd
+  684  ls
+  685  ./bin/start-micro-quickstart
+  686  export DRUID_SKIP_JAVA_CHECK=1
+  687  ./bin/start-micro-quickstart
+  688  java
+  689  docker ps
+  690  jave --version
+  691  java --version
+  692  docker ps
+  693  telnet den-dev-kafka5-01 9092
+  694  nslookup den-druid01
+  695  locate
+  696  locate java
+  697  which java
+  698  nslookup den-druid01
+  699  telnet den-nonprodphi-kafka5-01 9092
+  700  find / -name "jav=a*
+  701  find / -name "java*
+  702  find / -name *java*
+  703  find / -name *java* |more
+  704  cd /root/project/druid/extensions-core/druid-kerberos/src/test/java
+  705  ls -ltr
+  706  cd org
+  707  ls -ltr
+  708  cd *
+  709  ls -ltr
+  710  cd *
+  711  ls -ltr
+  712  te
+  713  telnet den-nonprodphi-kafka5-01 9092
+  714  telnet den-nonprodphi-kafka5-02 9092
+  715  telnet den-nonprodphi-kafka5-03 9092
+  716  telnet den-nonprodphi-kafka5-04 9092
+  717  telnet den-nonprodphi-kafka5-05 9092
+  718  telnet den-nonprodphi-kafka5-06 9092
+  719  telnet den-nonprodphi-kafka5-07 9092
+  720  docker ps
+  721  docker exec -ti d1fd07780992 /bin/bash
+  722  which bash
+  723  docker exec -ti d1fd07780992 /usr/bin/bash
+  724  exit
+  725  docker ps
+  726  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  727  cd project/druid
+  728  pwd
+  729  cd distribution/
+  730  ls
+  731  cd doc
+  732  cd docker/
+  733  ls
+  734  vi environment
+  735  cat environment
+  736  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  737  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  738  vi environment
+  739  cat environment
+  740  pwd
+  741  cat environment
+  742  cd /root/project/druid/distribution/docker
+  743  ls
+  744  cat environment
+  745  vi environment
+  746  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  747  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  748  cat environment
+  749  pwd
+  750  ls -lrt
+  751  cat docker-compose.yml
+  752  cat environment
+  753  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  754  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  755  docker ps
+  756  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  757  vi environment
+  758  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml up -d
+  759  ls
+  760  cat v
+  761  cat druid.sh
+  762  echo $COMMON_CONF_DIR
+  763  cat environment
+  764  docker ps
+  765  cat druid.sh
+  766  ls
+  767  ls -lrt
+  768  cat docker-compose.yml
+  769  cp docker-compose.yml docker-compose_old.yml
+  770  ls -lrt
+  771  cd project/druid/distribution/docker/
+  772  ls
+  773  cat environment
+  774  exit
+  775  cat conf/druid/_common/common.runtime.properties
+  776  find / +name _common/common.runtime.properties
+  777  find / name _common/common.runtime.properties
+  778  find / name _common/common.runtime.propertiesfind / -name *_common/common.runtime.properties
+  779  find / -name *common.runtime.properties
+  780  vi /root/project/druid/examples/conf/druid/cluster/_common/common.runtime.properties
+  781  curl http://localhost:8081/subjects/Kafka-key/versions
+  782  curl -X GET http://localhost:8081/subjects
+  783  telnet den-nonprodphi-kafka5-01
+  784  telnet den-nonprodphi-kafka5-01 8081
+  785  ping den-druid01
+  786  exit
+  787  ping den-nonprodphi-kafka5-01.ch.int:8081
+  788  ping den-nonprodphi-kafka5-01.ch.int:9092
+  789  ping den-nonprodphi-kafka5-01.ch.int
+  790  ping 10.11.30.67:8081
+  791  telnet 10.11.30.67:8081
+  792  nmap 10.11.30.67 -p 8081
+  793  pwd
+  794  telnet 10.11.30.67 8081
+  795  telnet 10.11.30.67 9092
+  796  telnet den-nonprodphi-kafka5-01 8081
+  797  telnet den-nonprodphi-kafka5-01 8080
+  798  telnet den-nonprodphi-kafka5-01 8081
+  799  telnet den-nonprodphi-kafka5-02 8081
+  800  exit
+  801  cd project/druid/
+  802  ls
+  803  ls -lrt
+  804  cd distribution
+  805  ls -lrt
+  806  cd docker/
+  807  cat environment 
+  808  ls -lrt
+  809  cat docker-compose.yml
+  810  cat environment 
+  811  docker ps
+  812  cd project/druid/distribution/
+  813  ls
+  814  cd docker/
+  815  ls -lrt
+  816  cat environment
+  817  ls -lrt
+  818  cat docker-compose.yml
+  819  telnet den-nonprodphi-kafka5-01 8081
+  820  telnet den-nonprodphi-kafka5-01 8080
+  821  telnet den-nonprodphi-kafka5-01 8081
+  822  cp /dev/null  /var/spool/mail/root
+  823  telnet den-nonprodphi-kafka5-01 8081
+  824  telnet den-nonprodphi-kafka5-02 8081
+  825  telnet den-nonprodphi-kafka5-03 8081
+  826  telnet den-nonprodphi-kafka5-04 8081
+  827  telnet den-nonprodphi-kafka5-05 8081
+  828  telnet den-nonprodphi-kafka5-06 8081
+  829  telnet den-nonprodphi-kafka5-07 8081
+  830  exit
+  831  telnet den-nonprodphi-kafka5-07 8081
+  832  telnet den-nonprodphi-kafka5-01 8081
+  833  telnet den-nonprodphi-kafka5-02 8081
+  834  telnet den-nonprodphi-kafka5-03 8081
+  835  telnet den-nonprodphi-kafka5-04 8081
+  836  telnet den-nonprodphi-kafka5-05 8081
+  837  telnet den-nonprodphi-kafka5-06 8081
+  838  telnet den-nonprodphi-kafka5-07 8081
+  839  telnet den-nonprodphi-kafka5-07 8080
+  840  telnet den-nonprodphi-kafka5-01 8080
+  841  exit
+  842  history
+  843  history > /tmp/druid_setup_history.txt
+  844  cd /tmp
+  845  ls -ltr
+  846  chmod 777 druid_setup_history.txt
+  847  ls -ltr
+  848  mv druid_setup_history.txt /home/beong/.
+  849  cd /home
+  850  ls -ltr
+  851  ls -ltr *beong*
+  852  cd beong-local
+  853  ls -ltr
+  854  cat *
+  855  ls -ltr
+  856  mv /tmp/*txt .
+  857  ls -ltr
+  858  cd ..
+  859  ls -ltr
+  860  cd beong-local
+  861  ls -ltr
+  862  cd ..
+  863  chmod 755 beong-local
+  864  cd  beong-local
+  865  ls -ltr
+  866  less  druid_setup_history.txt
+  867  systemctl status docker
+  868  docker ps
+  869  less  druid_setup_history.txt
+  870   systemctl show --property=Environment docker
+  871  less  druid_setup_history.txt
+  872  systemctl restart docker
+  873  docker ps
+  874  less  druid_setup_history.txt
+  875  systemctl status docker
+  876  docker ps
+  877  less  druid_setup_history.txt
+  878  systemctl reload docker
+  879  docker ps
+  880  less druid_setup_history.txt
+  881  cd
+  882  clear
+  883  docker-compose up -d
+  884  find / -name start-micro-quickstart
+  885  cd /root/project/druid/examples/
+  886  ls -ltr
+  887  cd bin
+  888  ls -ltr
+  889  cd ..
+  890  ./bin/start-micro-quickstart
+  891  export DRUID_SKIP_JAVA_CHECK=1
+  892  ./bin/start-micro-quickstart
+  893  docker -ps
+  894  docker ps
+  895  docker-compose up -d
+  896  service docker restart
+  897  docker ps
+  898  systemctl start druid
+  899  docker ps
+  900  service druid-broker start
+  901  cd /root/project/druid/examples/bin/
+  902  su - drout 
+  903  docker-compose up
+  904  find / -name docker-compose.y"*"
+  905  docker-compose up /root/project/druid/distribution/docker/docker-compose.yml
+  906  cat /root/project/druid/distribution/docker/docker-compose.yml
+  907  cd /root/project/druid/distribution/docker/docker-compose.yml
+  908  cd /root/project/druid/distribution/docker/
+  909  ls -ltr
+  910  pwd
+  911  docker-compose up -d
+  912  docker ps
+  913  pwd
+  914  cd
+  915  vi .bashrc
+  916  source .bashrc
+  917  service restart docker
+  918  docker ps
+  919  systemctl restart docker 
+  920  docker ps
+  921  alias 
+  922  druid-up
+  923  docker ps
+  924  cd
+  925  vi .bashrc
+  926  source .bashrc
+  927  ls -ltr
+  928  alias 
+  929  vi .bashrc
+  930  source .bashrc
+  931  alias 
+  932  exit
+  933  alias
+  934  docker_restart
+  935  docker ps
+  936  druid_up
+  937  docker ps
+  938  exit
+  939  history |grep telnet
+  940  telnet den-nonprodphi-kafka5-01 8081
+  941  telnet den-nonprodphi-kafka5-02 8081
+  942  telnet den-nonprodphi-kafka5-03 8081
+  943  telnet den-nonprodphi-kafka5-04 8081
+  944  telnet den-nonprodphi-kafka5-05 8081
+  945  telnet den-nonprodphi-kafka5-06 8081
+  946  telnet den-nonprodphi-kafka5-07 8081
+  947  netstat -tanp |grep 8081
+  948  vi /etc/hosts
+  949  iplist
+  950  telnet den-nonprodphi-kafka5-07 8081
+  951  netstat -tanp |grep 8081
+  952  docker ps
+  953  alias 
+  954  docker_restart
+  955  docker ps
+  956  druid_up
+  957  docker ps
+  958  telnet den-nonprodphi-kafka5-07 8081
+  959  telnet den-nonprodphi-kafka5-01 8081
+  960  docker ps
+  961  exit
+  962  telnet den-nonprodphi-kafka5-01 8081
+  963  telnet den-nonprodphi-kafka5-02 8081
+  964  pwd
+  965  docker ps
+  966  docker logs middlemanager
+  967  docker ps
+  968  docker logs historical
+  969  docker logs broker
+  970  docker ps
+  971  docker logs coordinator
+  972  docker ps
+  973  docker logs middlemanager
+  974  docker ps
+  975  docker logs middlemanager
+  976  cd var/druid/task/index_kafka_questionnaireservice_denpreprod.questionnaireservice_denpreprod.covid_19_rtw_assessment_result_outcomes_38b96cf346e10b5_ecnipigp/log
+  977  docker ps
+  978  docker exec -it middlemanager sh
+  979  docker ps
+  980  pwd
+  981  cd project/druid/
+  982  ls -1
+  983  cd distribution/
+  984  ls -a
+  985  cd docker/
+  986  ls -a
+  987  cd storage/
+  988  ls -a
+  989  cd ..
+  990  docker ps
+  991  cd project/druid/distribution/
+  992  cd docker
+  993  ls -lrt
+  994  pwd
+  995  cat docker-compose.yml
+  996  cat environment
+  997  docker ps
+  998  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml stop
+  999  docker ps
+ 1000  docker-compose -f /root/project/druid/distribution/docker/docker-compose.yml start
+ 1001  docker ps
+ 1002  ls
+ 1003  cd project/
+ 1004  ls
+ 1005  cd druid/
+ 1006  ls
+ 1007  ip a
+ 1008  free -h
+ 1009  ping google.com
+ 1010  history 
+ 1011  cd project/druid/distribution/
+ 1012  cd distribution/
+ 1013  ls
+ 1014  cat docker/docker-compose.yml 
+ 1015  ip a
+ 1016  free -h
+ 1017  pwd
+ 1018  ls
+ 1019  cd docker/
+ 1020  ls
+ 1021  docker ps
+ 1022  #docker resttart 6ba61bce8a2c
+ 1023  history 
+You have mail in /var/spool/mail/root
+[root@den-druid01 docker]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                    NAMES
+6ba61bce8a2c        apache/druid:0.19.0   "/druid.sh router"       3 weeks ago         Up 5 days           0.0.0.0:8888->8888/tcp                   router
+0345fec02444        apache/druid:0.19.0   "/druid.sh historical"   3 weeks ago         Up 5 days           0.0.0.0:8083->8083/tcp                   historical
+63468e7041b7        apache/druid:0.19.0   "/druid.sh broker"       3 weeks ago         Up 5 days           0.0.0.0:8082->8082/tcp                   broker
+b5af31aeaa4d        apache/druid:0.19.0   "/druid.sh middleM..."   3 weeks ago         Up 5 days           0.0.0.0:8091->8091/tcp                   middlemanager
+629ab1a09fe8        apache/druid:0.19.0   "/druid.sh coordin..."   3 weeks ago         Up 5 days           0.0.0.0:8081->8081/tcp                   coordinator
+81060b79576d        postgres:latest       "docker-entrypoint..."   2 months ago        Up 5 days           5432/tcp                                 postgres
+c7921b38f2db        zookeeper:3.5         "/docker-entrypoin..."   2 months ago        Up 5 days           2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   zookeeper
+[root@den-druid01 docker]# pwd
+/root/project/druid/distribution/docker
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# cd /root/project/
+[root@den-druid01 project]# ls
+druid
+[root@den-druid01 project]# cd driu
+-bash: cd: driu: No such file or directory
+[root@den-druid01 project]# cd druid/
+[root@den-druid01 druid]# ls
+CONTRIBUTING.md  dev                 indexing-hadoop                          services
+LABELS           distribution        indexing-service                         setup-hooks.sh
+LICENSE          docs                integration-tests                        sql
+NOTICE           examples            licenses                                 updates-data.json
+README.md        extendedset         licenses.yaml                            upload.sh
+README.template  extensions          owasp-dependency-check-suppressions.xml  web-console
+benchmarks       extensions-contrib  pom.xml                                  website
+cloud            extensions-core     processing
+codestyle        hll                 publications
+core             hooks               server
+[root@den-druid01 druid]# cd distribution/docker/
+[root@den-druid01 docker]# ls
+Dockerfile         Dockerfile.mysql  docker-compose.yml         docker-compose_old.yml  environment
+Dockerfile.java11  README.md         docker-compose_0_17.0.yml  druid.sh                storage
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                                    NAMES
+6ba61bce8a2c        apache/druid:0.19.0   "/druid.sh router"       3 weeks ago         Up 5 days           0.0.0.0:8888->8888/tcp                   router
+0345fec02444        apache/druid:0.19.0   "/druid.sh historical"   3 weeks ago         Up 5 days           0.0.0.0:8083->8083/tcp                   historical
+63468e7041b7        apache/druid:0.19.0   "/druid.sh broker"       3 weeks ago         Up 5 days           0.0.0.0:8082->8082/tcp                   broker
+b5af31aeaa4d        apache/druid:0.19.0   "/druid.sh middleM..."   3 weeks ago         Up 5 days           0.0.0.0:8091->8091/tcp                   middlemanager
+629ab1a09fe8        apache/druid:0.19.0   "/druid.sh coordin..."   3 weeks ago         Up 5 days           0.0.0.0:8081->8081/tcp                   coordinator
+81060b79576d        postgres:latest       "docker-entrypoint..."   2 months ago        Up 5 days           5432/tcp                                 postgres
+c7921b38f2db        zookeeper:3.5         "/docker-entrypoin..."   2 months ago        Up 5 days           2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   zookeeper
+[root@den-druid01 docker]# docker ps -a
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS                      PORTS                                    NAMES
+6ba61bce8a2c        apache/druid:0.19.0   "/druid.sh router"       3 weeks ago         Up 5 days                   0.0.0.0:8888->8888/tcp                   router
+0345fec02444        apache/druid:0.19.0   "/druid.sh historical"   3 weeks ago         Up 5 days                   0.0.0.0:8083->8083/tcp                   historical
+63468e7041b7        apache/druid:0.19.0   "/druid.sh broker"       3 weeks ago         Up 5 days                   0.0.0.0:8082->8082/tcp                   broker
+b5af31aeaa4d        apache/druid:0.19.0   "/druid.sh middleM..."   3 weeks ago         Up 5 days                   0.0.0.0:8091->8091/tcp                   middlemanager
+629ab1a09fe8        apache/druid:0.19.0   "/druid.sh coordin..."   3 weeks ago         Up 5 days                   0.0.0.0:8081->8081/tcp                   coordinator
+5c9a400016c7        ubuntu                "tail -f /dev/null"      2 months ago        Exited (137) 2 months ago                                            adoring_mcclintock
+49fafaeb1617        ubuntu                "tail -f /dev/null"      2 months ago        Exited (137) 2 months ago                                            affectionate_darwin
+81060b79576d        postgres:latest       "docker-entrypoint..."   2 months ago        Up 5 days                   5432/tcp                                 postgres
+c7921b38f2db        zookeeper:3.5         "/docker-entrypoin..."   2 months ago        Up 5 days                   2181/tcp, 2888/tcp, 3888/tcp, 8080/tcp   zookeeper
+[root@den-druid01 docker]# 
+You have mail in /var/spool/mail/root
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# 
+[root@den-druid01 docker]# ls
+Dockerfile         Dockerfile.mysql  docker-compose.yml         docker-compose_old.yml  environment
+Dockerfile.java11  README.md         docker-compose_0_17.0.yml  druid.sh                storage
+[root@den-druid01 docker]# packet_write_wait: Connection to 10.11.21.226 port 3389: Broken pipe
+PRINHYLTPAP1411:~ saipavan$ 
+PRINHYLTPAP1411:~ saipavan$ ssh -p3389 sseetha@den-mon01
+Last login: Wed Sep 30 04:50:43 2020 from den-mon01.ch.int
+
+
+     .d8888b.                    888    888 d8b          888      888
+    d88P  Y88b                   888    888 Y8P          888      888
+    888    888                   888    888              888      888
+    888         8888b.  .d8888b  888888 888 888  .d88b.  88888b.  888888
+    888            "88b 88K      888    888 888 d88P"88b 888 "88b 888
+    888    888 .d888888 "Y8888b. 888    888 888 888  888 888  888 888
+    Y88b  d88P 888  888      X88 Y88b.  888 888 Y88b 888 888  888 Y88b.
+     "Y8888P"  "Y888888  88888P'  "Y888 888 888  "Y88888 888  888  "Y888
+                                                     888
+                                                Y8b d88P
+                                                 "Y88P"
+
+
+IMPORTANT: Periodic Chef converge DISABLED
+
+The chef cookbook changes are NOT applied to the machine.
+If you need to apply the changes through chef run clh-sourdough-enable.
+
+Hostname: den-mon01.ch.int
+Chef Data:
+  * Node Name: den-mon01.ch.int
+  * Run list: nucleus
+
+Chef runs are disabled on this machine.
+
+OS Version: CentOS Linux release 7.7.1908 (Core)
+Kernel Version: 3.10.0-1062.12.1.el7.x86_64
+Virtualization System: vmware
+
+-----------------------------------------------------------------
+This system is for the use of authorized users only.
+Individuals using this computer system without authority, or in
+excess of their authority, are subject to having all of their
+activities on this system monitored and recorded by system
+personnel.
+
+In the course of monitoring individuals improperly using this
+system, or in the course of system maintenance, the activities
+of authorized users may also be monitored.
+
+Anyone using this system expressly consents to such monitoring
+and is advised that if such monitoring reveals possible
+evidence of criminal activity, system personnel may provide the
+evidence of such monitoring to law enforcement officials.
+-----------------------------------------------------------------
+
+
+
+Display health test results by running 'clh run all|live|acceptance tests.
+bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+[sseetha@den-mon01 ~]$ 
+[sseetha@den-mon01 ~]$ 
+[sseetha@den-mon01 ~]$ 
+[sseetha@den-mon01 ~]$ 
+[sseetha@den-mon01 ~]$ 
+[sseetha@den-mon01 ~]$ ssh -p 3389 sseetha@den-prod-elk01
+Password:
+Last login: Wed Sep 30 04:50:49 2020 from den-mon01.ch.int
+-----------------------------------------------------------------
+This system is for the use of authorized users only.
+Individuals using this computer system without authority, or in
+excess of their authority, are subject to having all of their
+activities on this system monitored and recorded by system
+personnel.
+
+In the course of monitoring individuals improperly using this
+system, or in the course of system maintenance, the activities
+of authorized users may also be monitored.
+
+Anyone using this system expressly consents to such monitoring
+and is advised that if such monitoring reveals possible
+evidence of criminal activity, system personnel may provide the
+evidence of such monitoring to law enforcement officials.
+-----------------------------------------------------------------
+This is a centralised logging PRODUCTION ELK machine.
+=================================================================
+################################################################################
+#    REF:RES-60276                                                             #
+#     Please don't remove indices manually please keep 65 days indices         #
+################################################################################
+[sseetha@den-prod-elk01 ~]$ sudo su -
+Last login: Wed Oct  7 04:03:14 UTC 2020 on pts/0
+[root@den-prod-elk01 ~]# history 
+    2  ps -ef |grep logstash
+    3  w
+    4  df -h
+    5  ps -ef | grep kibama
+    6  ps -ef | grep kibana
+    7  service kibana restart
+    8  ps -ef | grep kibana
+    9  service kibana stop
+   10  ps -ef | grep kibana
+   11  service kibana stop
+   12  ps -ef | grep kibana
+   13  kill -9 28871
+   14  ps -ef | grep kibana
+   15  date
+   16  service kibana status
+   17  kill -9 31408
+   18  ps -ef | grep kibana
+   19  kill -9 31579
+   20  ps -ef | grep kibana
+   21  cd /var/log/kibana/
+   22  ls -ltr
+   23  tail -100f kibana.stderr
+   24  ps -ef | grep kibana
+   25  netstat -tunlp|grep 8080
+   26  kill -9 31658
+   27  ps -ef | grep kibana
+   28  kill -9 32182
+   29  ps -ef | grep kibana
+   30  service kibana stop
+   31  ps -ef | grep kibana
+   32  systemctl status kibana
+   33  ps -ef | grep kibana
+   34  pwd
+   35  ls -ltr
+   36  tail -100 kibana.stderr
+   37  ls -ltr
+   38  > kibana.stderr
+   39  systemctl stop kibana
+   40  systemctl status kibana
+   41  ps -ef | grep kibana
+   42  systemctl start kibana
+   43  ps -ef | grep kibana
+   44  ls -ltr
+   45  cat /etc/nginx/nginx.conf
+   46  cd /etc/nginx/sites-enabled
+   47  ls -ltr
+   48  cat kibana-ssl.conf 
+   49  netstat -tulnp|grep kibana
+   50  ps -ef | grep kibana
+   51  ls -ltr
+   52  cd /var/log/kibana/
+   53  ls -ltr
+   54  date
+   55  ps -ef | grep kibana
+   56  ls -ltr
+   57  netstat -tulnp|grep kibana
+   58  ls -ltr
+   59  service logstash status
+   60  netstat -tulnp|grep kibana
+   61  ps -ef | grep kibana
+   62  ls -ltr
+   63  df -h
+   64  netstat -tulnp|grep kibana
+   65  ps -ef | grep kibana
+   66  more /etc/kibana/kibana.yml
+   67  grep log /etc/kibana/kibana.yml
+   68  ls -ltr
+   69  ps -ef | grep kibana
+   70  netstat -tulnp|grep kibana
+   71  systemctl stop kibana
+   72  ps -ef | grep kibana
+   73  service kibana start
+   74  ps -ef | grep kibana
+   75  ls -ltr
+   76  ps -ef | grep kibana
+   77  ls -ltr
+   78  systemctl status kibana
+   79  ls -ltr
+   80  ps -ef | grep kibana
+   81  netstat -tulnp|grep kibana
+   82  ps -ef | grep kibana
+   83  ls -ltr
+   84  tail -100f kibana.stdout
+   85  ps -ef | grep kibana
+   86  netstat -tulnp|grep kibana
+   87  netstat -tulnp|grep 8080
+   88  grep port /etc/kibana/kibana.yml
+   89  ls -lt /etc/kibana/kibana.yml
+   90  date
+   91  cat /etc/nginx/sites-enabled/kibana-ssl.conf 
+   92  netstat -tunl|grep 56
+   93  netstat -tunl|grep 5601
+   94  vi /etc/kibana/kibana.yml
+   95  service kibana stop
+   96  ps -ef | grep kibana
+   97  service kibana start
+   98  ps -ef | grep kibana
+   99  pwd
+  100  netstat -tunl|grep 5601
+  101  ls -ltr
+  102  tail -100f kibana.stdout
+  103  cat /etc/nagios/nrpe.cfg |grep elastc
+  104  cat /etc/nagios/nrpe.cfg |grep elasti
+  105  cat /etc/nagios/nrpe.cfg 
+  106  /usr/lib64/nagios/plugins/check_http -H den-prod-elk01 -u /_cluster/health?pretty -p 9200 -w 1 -c 1  -r 'red' --invert-regex
+  107  tail -100f kibana.stdout
+  108  netstat -tunl|grep 5601
+  109  history|grep curl
+  110  curl -X GET "den-prod-elk01:9200/_
+  111  curl den-prod-elk01:9200/_nodes?pretty
+  112  history|grep curl
+  113   curl -XGET http://10.11.23.90:9200/_cluster/health?pretty
+  114  /usr/lib64/nagios/plugins/check_http -H den-prod-elk01 -u /_cluster/health?pretty -p 9200 -w 1 -c 1  -r 'red' --invert-regex
+  115  curl -vvv http://den-prod-elk01.ch.int:5601
+  116  curl -vvv http://den-prod-elk01.ch.int:5601/app/kibana
+  117  cat /etc/nginx/sites-enabled/kibana-ssl.conf 
+  118  netstat -tulnp|grep 5610
+  119  netstat -tulnp|grep 5601
+  120  curl -vvv http://den-prod-elk01.ch.int:5601/app/kibana
+  121  pwd
+  122  ls -ltr
+  123  tail -100 kibana.stdout
+  124  curl -k -vvv https://den-prod-elk01.ch.int
+  125  pwd
+  126  ls -ltr
+  127  tail -100 kibana.stdout
+  128  /usr/lib64/nagios/plugins/check_http -H den-prod-elk01 -u /app/kibana -p 5601 -w 1 -c 1 
+  129  /usr/lib64/nagios/plugins/check_http -H 127.0.0.1 -u /app/kibana -p 5601 -w 1 -c 1 
+  130  vi /etc/nginx/sites-enabled/kibana-ssl.conf 
+  131  service nginx restart
+  132  nginx -t
+  133  vi /etc/nginx/sites-enabled/kibana-ssl.conf
+  134  vi /etc/nginx/sites-enabled/kibana.conf 
+  135  vi /etc/nginx/sites-enabled/kibana-ssl.conf
+  136  nginx -t
+  137  service nginx restart
+  138  ps -ef | grep nginx
+  139  cat /etc/nginx/sites-enabled/kibana-ssl.conf
+  140  /usr/lib64/nagios/plugins/check_http -H den-prod-elk01 -u /app/kibana -p 5601 -w 1 -c 1
+  141  cd /var/log/kibana/
+  142  ls -ltr
+  143  tail -100f kibana.stdout 
+  144  vi /etc/nagios/nrpe.cfg 
+  145  last|more
+  146  service nrpe restart
+  147  cat /etc/nagios/nrpe.cfg 
+  148  ps -ef |grep kibana
+  149  date
+  150  ps -ef |grep kibana
+  151  cd /var/log/kibana/
+  152  ls -ltr
+  153  tail -200f kibana.stdout
+  154  ps -ef |grep elastic
+  155  tail -200f kibana.stdout
+  156  ps -ef |grep elasticsea
+  157  netstat -anlpt |grep 9200
+  158  netstat -anlpt |grep 9300
+  159  tail -200f kibana.stdout
+  160  ps -ef |grep kibana
+  161  ls -l /etc/kibana/kibana.yml
+  162  date
+  163  ls -l /etc/kibana/kibana.yml*
+  164  cat /etc/kibana/kibana.yml
+  165  ps -ef |grep elastic
+  166  cd /var/log/elasticsearch/
+  167  ls -ltr
+  168  tail -200f denprodes.log
+  169  cat /etc/kibana/kibana.yml
+  170  locate ngnix
+  171  history
+  172  locate nginx.conf.default
+  173  cd /etc/nginx/
+  174  ls
+  175  cat nginx.conf
+  176  cat nginx.conf.default 
+  177  cat /etc/kibana/kibana.yml
+  178  cat /etc/elasticsearch/elasticsearch.yml
+  179  systemctl status elasticsearch
+  180  ls -l /etc/elasticsearch/elasticsearch.yml
+  181  date
+  182  cat /etc/elasticsearch/elasticsearch.yml
+  183  systemctl status kibana
+  184  systemctl start kibana
+  185  systemctl status kibana
+  186  systemctl status kibana -l
+  187  ps -ef | grep kibana
+  188  cat /etc/kibana/kibana.yml
+  189  cd /opt/logstash/patterns/
+  190  ls- ltrh
+  191  ls -ltrh
+  192  cat grok-patterns 
+  193  exit
+  194  history 
+  195  cat /etc/elasticsearch/elasticsearch.yml
+  196  exit
+  197  locate patterns
+  198  cd /opt/logstash/patterns/
+  199  ls -ltr
+  200  locate logstash/version.rb
+  201  cat /usr/share/logstash/logstash-core/lib/logstash/version.rb
+  202  yum list installed |grep logstash
+  203  ls
+  204  pwd
+  205  ls -ltr
+  206  more catalina 
+  207  more tomcat 
+  208  more grok-patterns
+  209  ls -ltr
+  210  ps -ef |grep http
+  211  vi /etc/kibana/kibana.yml
+  212  grep -v "^#" /etc/kibana/kibana.yml
+  213  vi /usr/share/kibana/bin/../node/bin/node
+  214  cd /usr/share/kibana/
+  215  ls
+  216  cd bin
+  217  ls
+  218  cd ../node
+  219  ls
+  220  cd share/
+  221  ls
+  222  cd doc/
+  223  ls
+  224  cd
+  225  locate cacerts
+  226  vi /etc/pki/java/cacerts
+  227  vi /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+  228  ls -l /etc/pki/java/cacerts
+  229  ls -l /etc/pki/ca-trust/extracted/java/cacerts
+  230  locate cacerts
+  231  java --versioon
+  232  java --version
+  233  java -version
+  234  md5sum /usr/java/jdk1.8.0_231/jre/lib/security/cacerts
+  235  cat /etc/knobs/Run
+  236  wcc -l /usr/java/jdk1.8.0_231/jre/lib/security/cacerts
+  237  wc -l /usr/java/jdk1.8.0_231/jre/lib/security/cacerts
+  238  md5sum /etc/pki/java/cacerts
+  239  which java
+  240  ls -k /bin/java
+  241  ls -l /bin/java
+  242  cd /etc/alternatives/
+  243  ls -ltr
+  244  cd /usr/java/jdk1.8.0_231/jre
+  245  ls
+  246  cd lib/security/
+  247  ls -ltr
+  248  md5sum cacerts
+  249  ps -ef |grep logstash
+  250  host den-prod-elk02
+  251  host den-prod-elk03
+  252  ps -ef |grep kibana
+  253  ps -ef |grep kibana
+  254  more /etc/kibana/kibana.yml
+  255  ps -ef |grep kibana
+  256  more /etc/kibana/kibana.yml
+  257  ps -ef |grep elasticsearch
+  258  ps -ef |grep httpd
+  259  pwd
+  260  cp cacerts cacerts-20200723
+  261  cp ~ckolla/cacerts .
+  262  ls -ltr
+  263  ps -ef |grep kibana
+  264  service kibana status
+  265  history |grep kibana
+  266  systemctl status kibana  -l
+  267  cd /etc/init.d/
+  268  ls
+  269  service kibana status
+  270  ps -ef |grep kibana
+  271  more /etc/nginx/sites-enabled/kibana.conf
+  272  cd /etc/nginx/sites-enabled/
+  273  ls
+  274  more kibana-ssl.conf 
+  275  cd /etc/ssl
+  276  ls
+  277  ls -ltr
+  278  cd ../pki/tls/certs
+  279  ls
+  280  cat ca-bundle.crt
+  281  more ca-bundle.crt
+  282  ls
+  283  ls
+  284  ls -ltr
+  285  pwd
+  286  ls -ltr
+  287  cp /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem-orig-01232020
+  288  vi /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+  289  vi /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
+  290  vi ca-bundle.trust.crt
+  291  history |grep kibana
+  292  history |grep nginx
+  293  vi /etc/nginx/nginx.conf
+  294  cd /etc/nginx/
+  295  ls
+  296  cd conf.d
+  297  ls
+  298  cd ../
+  299  cat nginx.conf
+  300  cd /etc/nginx/sites-enabled/
+  301  ls
+  302  cd ../conf.d/
+  303  ls
+  304  history |grep nginx
+  305  ps -ef |grep nginx
+  306  service nginx restart
+  307  ps -ef |grep nginx
+  308  date
+  309  service kibana status
+  310  service kibana restart
+  311  service kibana status
+  312  ps -ef |grep kibana
+  313  ps -ef |grep kibana
+  314  ps -ef |grep kibana
+  315  history | grep kibana
+  316  systemctl status kibana -l
+  317  systemctl status kibana -l
+  318  systemctl status kibana -l
+  319  systemctl status kibana
+  320  ps -ef |grep kibana
+  321  ps -ef |grep kibana
+  322  locate cacerts
+  323  cd /etc/pki/ca-trust/
+  324  ls
+  325  cd extracted/
+  326  ls
+  327  cd java
+  328  ls
+  329  ls -lrt
+  330  wc -l cacerts 
+  331  more cacerts
+  332  cp cacerts cacerts-orig-20200723
+  333  cp ~ckolla/cacerts .
+  334  ls -ltr
+  335  service nginx status
+  336  service nginx restart
+  337  service kibana restart
+  338  ps -ef |grep kibana
+  339  ps -ef |grep nginx
+  340  date
+  341  ps -ef |grep nginx
+  342  service nginx status
+  343  systemctl status kibana -l
+  344  locate cacerts
+  345  curl -vvv -k https://den-prod-elk01.ch.int
+  346  pwd
+  347  ls
+  348  cd cacerts
+  349  keytool -list -v -keystore /home/sseetha/jdk1.8.0_231/jre/lib/security/cacerts
+  350  keytool -list -v -keystore /home/sseetha/jdk1.8.0_231/jre/lib/security/cacerts | more
+  351  keytool -list -v -keystore /home/sseetha/jdk1.8.0_231/jre/lib/security/cacerts | more
+  352  cd /etc/pki/ca-trust/
+  353  ls
+  354  cd extracted/
+  355  ls
+  356  cd java
+  357  ls
+  358  keytool -list -v -keystore cacerts-orig-20200723 | more
+  359  ls
+  360  cd ..
+  361  ls
+  362  cd openssl/
+  363  ls
+  364  ls -ltr
+  365  pwd
+  366  vi ca-bundle.trust.crt
+  367  vi ca-bundle.trust.crt
+  368  cd ..
+  369  ls
+  370  cd ../
+  371  ls
+  372  cd extracted/
+  373  ls
+  374  cd pem/
+  375  ls
+  376  ls -ltr
+  377  vi tls-ca-bundle.pem
+  378  vi tls-ca-bundle.pem
+  379  echo -n | strace -Ff -o wtf openssl s_client -showcerts -connect  den-prod-elk01 443
+  380  echo -n | strace -Ff -o wtf openssl s_client -showcerts -connect  den-prod-elk01 80
+  381  ls -l /etc/ssl/nginx.csr
+  382  cd /etc/ssl
+  383  ls
+  384  ll
+  385  cd ../
+  386  ls -ltr
+  387  cp -Rvf ssl/* ssl-old/
+  388  mkdir ssl-old/
+  389  cp -Rvf ssl/* ssl-old/
+  390  cd ssl-old/
+  391  ll
+  392  cd ../pki/tls/certs
+  393  cd ..
+  394  ls -ltr
+  395  mkdir certs-old
+  396  cp -Rvf certs/* certs-old/
+  397  pwd
+  398  cd /etc/pki/ca-trust
+  399  ls
+  400  ccd ..
+  401  cd /etc/pki
+  402  ls
+  403  cd ..
+  404  ls
+  405  mkdir pki pki-old
+  406  cd pki-old/
+  407  ls
+  408  cd ..
+  409  cp -Rvf pki/* pki-old/
+  410  cd /etc/ssl
+  411  ls
+  412  openssl req -new -newkey rsa:2048 -nodes -out /etc/ssl/nginx.csr -keyout  /etc/ssl/nginx.key -subj "/C=US/ST=California/L=San Francisco/O=Castlight Health Inc./OU=Resilience/CN=den-prod-elk01.ch.int"
+  413  cat /etc/ssl/nginx.key
+  414  host sf-ca01
+  415  ls
+  416  ls -ltr
+  417  host den-prod-elk01
+  418  nslookup den-prod-elk01
+  419  nslookup den-prod-elk01.castlighthealth.com
+  420  ls
+  421  cd ../
+  422  ls -ltr
+  423  cp -Rvf ssl-old/* ssl/
+  424  cd ssl
+  425  ls -ltr
+  426  cat nginx.csr
+  427  service nginx status
+  428  service nginx restart
+  429  service nginx status
+  430  service kibana status
+  431  service kibana start
+  432  service kibana status
+  433  service kibana status
+  434  systemctl status kibana
+  435  systemctl status kibana -l
+  436  curl -vvv -k https://den-prod-elk01.castlighthealth.com
+  437  nslookup den-prod-elk01.castlighthealth.com
+  438  nslookup den-prod-elk01.castlighthealth.com
+  439  nslookup den-prod-elk01.castlighthealth.com
+  440  nslookup den-prod-elk01.castlighthealth.com
+  441  nslookup den-prod-elk01.castlighthealth.com
+  442  nslookup den-prod-elk01.castlighthealth.com
+  443  nslookup den-prod-elk01.castlighthealth.com
+  444  nslookup den-prod-elk01.castlighthealth.com
+  445  nslookup den-prod-elk01.castlighthealth.com
+  446  nslookup den-prod-elk01.castlighthealth.com
+  447  nslookup den-prod-elk01.castlighthealth.com
+  448  cd /etc/nginx/
+  449  ls -ltr
+  450  cd sites-enabled/
+  451  ls -ltrr
+  452  grep den-prod-elk01 *
+  453  cp kibana.conf kibana.conf-07232020
+  454  cp kibana-ssl.conf kibana-ssl.conf-07232020
+  455  vi kibana.conf
+  456  vi kibana-ssl.conf
+  457  ps -ef |grerp kibana
+  458  ps -ef |grep kibana
+  459  vi /etc/kibana/kibana.yml
+  460  cp /etc/kibana/kibana.yml /etc/kibana/kibana.yml-07232020
+  461  vi /etc/kibana/kibana.yml
+  462  service nginx status
+  463  service nginx restart
+  464  service nginx status
+  465  cd /etc/nginx/sites-enabled/
+  466  ls
+  467  mv kibana.conf-07232020 kibana-ssl.conf-07232020 ~ckolla/
+  468  service nginx restart
+  469  service nginx status
+  470  service kibana restart
+  471  service kibana status
+  472  ps -ef |grep kibana
+  473  ps -ef |grep kibana
+  474  cd /etc/nginx/
+  475  ls
+  476  cd sites-enabled/
+  477  ls
+  478  grep den-prod-elk01 *
+  479  vi kibana-ssl.conf
+  480  host den-prod-elk01
+  481  ls -ltr
+  482  cat *
+  483  ls -ltr /etc/ssl/nginx.crt
+  484  more /etc/ssl/nginx.crt
+  485  pwd
+  486  cd /etc/
+  487  ls -ltr
+  488  cd ssl
+  489  ls
+  490  vi nginx.crt 
+  491  cat nginx.key
+  492  cat nginx.crt
+  493  service nginx status
+  494  service nginx restart
+  495  service nginx status
+  496  service kibana restarrt
+  497  service kibana restart
+  498  service kibana status
+  499  ls
+  500  cd /etc/nginx/sites-enabled/
+  501  cat *
+  502  tail -200f /var/log/nginx/kibana/access.log
+  503  tail -200f /var/log/nginx/kibana/error.log 
+  504  cd /etc/kibana/
+  505  ls
+  506  vi kibana.yml
+  507  cd -
+  508  ls
+  509  vi kibana.conf 
+  510  vi kibana-ssl.conf 
+  511  service nginx restart
+  512  tail -200f /var/log/nginx/kibana/access.log
+  513  cd /var/log/kibana/
+  514  ls -ltr
+  515  tail -200f kibana.stderr
+  516  service kibana restart
+  517  service kibana status
+  518  tail -200f kibana.stderr
+  519  host 216.245.187.14
+  520  host den-prod-elk01.castlighthealth.com
+  521  tail -200f /var/log/nginx/kibana/access.log
+  522  ls -ltr
+  523  tail -200f kibana.stdout
+  524  pwd
+  525  cd /etc/kibana/
+  526  ls
+  527  cp kibana.yml-07232020 kibana.yml
+  528  cd /etc/nginx/
+  529  ls
+  530  cd sites-enabled/
+  531  ls -ltrr
+  532  cp ~ckolla/kibana.conf-07232020 kibana.conf 
+  533  cp ~ckolla/kibana-ssl.conf-07232020 kibana-ssl.conf 
+  534  cd /etc/ssl
+  535  ls
+  536  cd ../
+  537  cp -Rvf ssl-old/* ssl/*
+  538  cp -Rvf ssl-old/* ssl/
+  539  service nginx restart
+  540  service kibana restart
+  541  service kibana status
+  542  openssl req -new -newkey rsa:2048 -nodes -out /etc/ssl/nginx.csr -keyout  /etc/ssl/nginx.key -subj "/C=US/ST=California/L=San Francisco/O=Castlight Health Inc./OU=Resilience/CN=den-prod-elk01.ch.int"
+  543  ls -l /etc/ssl/nginx.key
+  544  date
+  545  cat /etc/ssl/nginx.crt 
+  546  vi /etc/ssl/nginx.crt
+  547  cd /etc/ssl
+  548  ls
+  549  ls -ltr
+  550  cat nginx.csr
+  551  ls
+  552  ls -ltr
+  553  vi nginx.crt
+  554  service nginx restart
+  555  service kibana restart
+  556  service kibana status
+  557  nslookup den-prod-elk01.castlighthealth.com
+  558  cd /opt/logstash/patterns/
+  559  ls -ltrh
+  560  cat grok-patterns 
+  561  ls -ltrh | wc -l 
+  562  ls -ltrh
+  563  cd ..
+  564  telnet den-deploy01 3389
+  565  scp -rp -P3389 patterns bkrishna@den-deploy01:~
+  566  exit
+  567  ls -lhtr
+  568  cd /var/log/
+  569  ls -lhtr
+  570  cd logstash2/
+  571  ls -lhtr
+  572  tail -100f logstash-plain.log 
+  573  cd
+  574  ls -lhtr
+  575  cd /opt/logstash/patterns/
+  576  ls -lhtr
+  577  cat grok-patterns | wc -l
+  578  cd /var/log/
+  579  ls -lhtr
+  580  cd logstash
+  581  ls -lhtr
+  582  cd ..
+  583  cd logstash2/
+  584  ls -lhtr
+  585  tail -100f logstash-plain.log 
+  586  ls -lhtr
+  587  date
+  588  vi /etc/cron.daily/
+  589  cd  cron.daily/
+  590  cd /etc/cron.d
+  591  ls
+  592  ls
+  593  history
+  594  history | grep -i Get
+  595  history | grep indices
+  596  curl -X GET "den-prod-elk01:9200/_cluster/indices?v
+  597  curl -X GET "den-prod-elk01:9200/_cluster/indices?v"
+  598  curl -X GET "den-prod-elk01:9200/_cat/indices?v
+  599  curl -X GET "den-prod-elk01:9200/_cat/indices?v"
+  600  curl -X GET "den-prod-elk01:9200/_cat/indices?v" | sort -rn 
+  601  curl -X GET "den-prod-elk01:9200/_cat/indices?v" | grep logstash-* | sort -rn
+  602  curl -X GET "den-prod-elk01:9200/_cat/indices?v" | grep logstash-* | sort -rn  | wc -l
+  603  cd /etc/logstash/conf.d/
+  604  ls
+  605  cat logstash.conf 
+  606  rpm -qa | grep logstash
+  607  tail -100f /var/log/logstash/logstash-plain.log 
+  608  ls
+  609  cat logstash.conf 
+  610  /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf --config.test_and_exit
+  611  echo $LS_HOME
+  612  cd /etc/logstash2/
+  613  ls
+  614  top
+  615  df -h
+  616  cd /var/lo
+  617  history
+  618  ps -ef | grep kibana
+  619  tail -200f /var/log/nginx/kibana/access.log
+  620  cd /var/log/nginx/kibana/
+  621  ls -ltrh
+  622  history | grep delete
+  623  history
+  624  history | grep -i DEL
+  625  history
+  626  history | grep curl
+  627  exit
+  628  cd /etc/nginx/
+  629  ls
+  630  ls -l /etc/ssl/nginx.csr
+  631  cd /etc/ss
+  632  cd /etc/ssl
+  633  ls -ltr
+  634  ls -ltr
+  635  cat nginx.csr
+  636  ls -ltr
+  637  cp nginx.key nginx.key-old
+  638  cat nginx.key
+  639  vi nginx.key
+  640  service nginx restart
+  641  systemctl status nginx.service
+  642  ls -ltr
+  643  cp nginx.key-old nginx.key
+  644  service nginx restart
+  645  history ccer
+  646  history | grep cer
+  647  cd /home/ckolla
+  648  ls -ltr
+  649  cd /etc/ssl
+  650  ls
+  651  ls -ltr
+  652  cp nginx.crt nginx.crt-old
+  653  cat nginx.crt
+  654  vi nginx.crt
+  655  service nginx restart
+  656  exit
+  657  ps -ef | grep redi
+  658  less /etc/nagios/nrpe.cfg 
+  659  bash -x /usr/lib64/nagios/plugins/check_redis_queue.sh
+  660  /usr/local/bin/redis-cli -h 10.11.23.90 -p 6380 llen logstash
+  661  grep redis /etc/nagios/nrpe.cfg 
+  662  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  663  more /usr/lib64/nagios/plugins/check_redis_queue.sh
+  664  /usr/local/bin/redis-cli -h 10.11.23.90 -p 6380 llen logstash
+  665  /usr/local/bin/redis-cli -h 10.11.23.90 llen logstash
+  666  tail -f /var/log/redis_6379
+  667  tail -f /var/log/redis_6380
+  668  ps -ef |grep logstash
+  669  vi /etc/logstash2/conf.d/logstash.conf 
+  670  cd /var/log/logstash2
+  671  ls
+  672  ls -ltr
+  673  tail -200f logstash-plain.log
+  674  datet
+  675  tail -200f logstash-plain-2020-08-26.log
+  676  cd ../logstash1
+  677  cd ..
+  678  cd logstash
+  679  ls -ltr
+  680  c
+  681  ps -ef |grep logstash
+  682  cd /var/log/logstash
+  683  ls -ltr
+  684  tail -200f logstash-plain.log
+  685  ps -ef |grep logstash
+  686  vi /etc/logstash/conf.d/logstash.conf 
+  687  vi /etc/logstash2/conf.d/logstash.conf 
+  688  service logstash status
+  689  service logstash2 status
+  690  vi /etc/logstash/conf.d/logstash.conf
+  691  service logstash restart
+  692  cd /var/log/logstash
+  693  ls -ltr
+  694  tail -200f logstash-plain.log
+  695  tail -200f logstash-plain.log
+  696  ps -ef |grep logstash
+  697  tail -200f logstash-plain.log
+  698  grep redis /etc/nagios/nrpe.cfg 
+  699  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  700  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  701  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  702  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  703  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  704  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  705  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  706  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  707  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  708  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  709  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  710  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  711  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  712  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  713  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  714  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  715  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  716  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  717  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  718  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  719  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  720  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  721  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  722  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  723  date
+  724  /usr/lib64/nagios/plugins/check_redis_queue.sh/usr/lib64/nagios/plugins/check_redis_queue.sh
+  725  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  726  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  727  exit
+  728  ps -ef |grep redis
+  729  history
+  730  ps -ef |grep redis
+  731  cd /usr/local/bin/
+  732  ls
+  733  vi /etc/redis/6380.conf 
+  734  tail -200f /var/log/redis_6380 
+  735  history |grep queue
+  736  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  737  tail -200f /var/log/redis_6379
+  738  service logstash status
+  739  service logstash status
+  740  service logstash status
+  741  service logstash status
+  742  vim /etc/logstash/conf.d/logstash.conf 
+  743  exit
+  744  /usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/logstash.conf --config.test
+  745  vim /etc/logstash/conf.d/logstash.conf 
+  746  tail -100f /var/log/logstash/logstash-plain.log 
+  747  cat /etc/logstash/conf.d/logstash.conf 
+  748  cat /etc/elasticsearch/elasticsearch.yml
+  749  netstat -antp | grep 9200
+  750  exit
+  751  which redis
+  752  ps -ef |grep redis
+  753  redis-cli
+  754  cd /usr/local/bin/
+  755  redis-cli
+  756  find / -name /usr/local/bin/
+  757  find / -name redis-cli
+  758  exit
+  759  ps -ef | grep -i redis
+  760  ls -lht /etc | grep redis
+  761  vim redis
+  762  vim /etc/redis
+  763  d /etc/redis
+  764  cd /etc/redis
+  765  ls
+  766  vim 6379.conf
+  767  vim 6380.conf
+  768  top
+  769  free -g 
+  770  vim /root/.bash_history 
+  771  tail -f /var/log/redis_6380
+  772  vim /root/.bash_history 
+  773  vim /usr/lib64/nagios/plugins/check_redis_queue.sh
+  774  vim /root/.bash_history 
+  775  rpm -qa | grep logstash
+  776  rpm -qa | grep elastic
+  777  rpm -qa | grep kibana
+  778  exit
+  779  cd /etc
+  780  find . -name "*.crt"
+  781  history 
+  782  history | grep healthy
+  783  history | grep health
+  784  exit
+  785  cd /etc/logstash
+  786  ls
+  787  cd conf.d/
+  788  ls
+  789  grep dex logstash.conf 
+  790  cd /var/log/logstash
+  791  ls -ltr
+  792  tail -200f logstash-plain.log
+  793  ps -ef |grep logstash
+  794  ls -ltr
+  795  cat /etc/logstash/conf.d/logstash.conf 
+  796  cat /etc/elasticsearch/elasticsearch.yml
+  797  yum list installed |grep -i elasticsearch
+  798  ls
+  799  cd /etc/logstash
+  800  ls
+  801  cd conf.d/
+  802  ls
+  803  cat logstash.conf
+  804  curl http://localhost:9200/_cluster/health?pretty
+  805  curl localhost:9200/_cluster/health?pretty
+  806  ps -ef |grep elastic
+  807  host den-prod-elk01
+  808  curl http://10.11.23.90:9200/_cluster/health?pretty
+  809  exit
+  810  ps -ef | grep -i elas
+  811  vi /etc/init.d/kibana 
+  812  less /etc/init.d/kibana
+  813  less /etc/init.d/elasticsearch 
+  814  cd  /etc/elasticsearch/
+  815  grep -r heap ./*
+  816  grep -r ES_HEAP_SIZE ./*
+  817  grep -r Xmx ./*
+  818  vi jvm.options
+  819  pwd
+  820  vi /etc/elasticsearch/jvm.options
+  821  less /var/log/nginx/error.log
+  822  netstat -nap | grep 443
+  823  ps -ef | grep 32544
+  824  less /etc/nginx/nginx.conf
+  825  curl -v https://den-prod-elk01.ch.int/app/kibana#
+  826  curl -k  -v https://den-prod-elk01.ch.int/app/kibana#
+  827  vi /etc/elasticsearch/jvm.options
+  828  less /etc/nginx/nginx.conf
+  829  ps -ef | grep kiba
+  830  less /etc/kibana/kibana.yml
+  831  vi /etc/elasticsearch/jvm.options
+  832  /etc/init.d/elasticsearch restart
+  833  vi /etc/elasticsearch/jvm.options
+  834  /etc/init.d/elasticsearch restart
+  835  vi /etc/elasticsearch/jvm.options
+  836  /etc/init.d/elasticsearch restart
+  837  vi /etc/elasticsearch/jvm.options
+  838  /etc/init.d/kibana restart
+  839  cd /etc
+  840  cd elast*
+  841  ls -ltr
+  842  vi jvm.options
+  843  /etc/init.d/elasticsearch restart
+  844  ps -ef |grep logstash
+  845  history |grep health
+  846  curl http://10.11.23.90:9200/_cluster/health?pretty
+  847  curl http://10.11.23.90:9200/_cluster/health?pretty
+  848  curl http://10.11.23.90:9200/_cluster/health?pretty
+  849  curl http://10.11.23.90:9200/_cluster/health?pretty
+  850  /etc/init.d/elasticsearch restart
+  851  exit
+  852  d
+  853  dq
+  854  free -g
+  855  cat /etc/fstab
+  856  exit
+  857  cd /opt/logstash/patterns/
+  858  egrep -i dex grok-patterns 
+  859  exit
+  860  systemctl status logstash
+  861  systemctl status logstash2
+  862  systemctl status logstash2 -l
+  863  history 
+  864  curl http://10.11.23.90:9200/_cluster/health?pretty
+  865  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  866  last
+  867  systemctl status redis
+  868  history | grep -i "redis\|queue"
+  869  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  870  ls
+  871  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  872  vim /usr/lib64/nagios/plugins/check_redis_queue.sh
+  873  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  874  systemctl status logstash
+  875  systemctl status logstash2
+  876  systemctl restart logstash2
+  877  systemctl status logstash2
+  878  tail -f /var/log/logstash2/logstash-plain.log 
+  879  systemctl status elasticsearch
+  880  systemctl status elasticsearch -l
+  881  systemctl status logstash2 -l
+  882  df -h
+  883  history | grep redis
+  884  sh /usr/lib64/nagios/plugins/check_redis_queue.sh
+  885  /usr/local/bin/redis-cli -h 10.11.23.90 -p 6380 llen logstash
+  886  ps -ef | grep redis
+  887  service redis status
+  888  ps -ef | grep redis
+  889  systemctl status logstash2 -l
+  890  ps -ef | grep chefd
+  891  ps -ef | grep chef
+  892  tail -f /var/log/elasticsearch/denprodes.log 
+  893  last
+  894   /usr/local/bin/redis-cli  -h 10.11.23.91 -p 6380 monitor
+  895  ip a
+  896   /usr/local/bin/redis-cli  -h 10.11.23.90 -p 6380 monitor
+  897  service redis_6379 status
+  898  service redis_6380 status
+  899  ps -ef | grep redis
+  900  history | grep health
+  901  curl http://10.11.23.90:9200/_cluster/health?pretty
+  902  df -h
+  903  service redis_6380 status
+  904  systemctl status logstash2
+  905  cd /var/log/logstash2/
+  906  ls
+  907  tail -f logstash-plain.log 
+  908  systemctl status logstash2
+  909  systemctl status elasticsearch
+  910  cat /etc/elasticsearch/jvm.options
+  911  cat /etc/elasticsearch/elasticsearch.yml
+  912  cat /etc/elasticsearch/jvm.options
+  913  cd /etc/elasticsearch/
+  914  ls
+  915  cat jvm.options
+  916  cat /var/lib/elasticsearch
+  917  cd /var/lib/elasticsearch/
+  918  ls
+  919  cd ..
+  920  free -h
+  921  cat /etc/elasticsearch/jvm.options
+  922  cat /etc/elasticsearch/jvm.options | grep jvm
+  923  cat /etc/elasticsearch/jvm.options | grep -i xargs
+  924  cat /etc/elasticsearch/jvm.options | grep -i Xms2g
+  925  cat /etc/elasticsearch/jvm.options | grep -i Xms
+  926  systemctl status elasticsearch -l
+  927  tail -f /var/log/elasticsearch/denprodes.log 
+  928  tail -f /var/log/logstash2/logstash-plain.log 
+  929  cd /etc/logstash2/
+  930  ls
+  931  cat jvm.options 
+  932  ls
+  933  vi jvm.options 
+  934  cat jvm.options 
+  935  cat ../logstash/jvm.options 
+  936  ls
+  937  cd conf.d/
+  938  ls
+  939  cat logstash.conf 
+  940  ls
+  941  cd ..
+  942  ls
+  943  cat log4j2.properties 
+  944  sdiff log4j2.properties ../logstash/log4j2.properties 
+  945  ls
+  946  sdiff conf.d/logstash.conf ../logstash/conf.d/logstash.conf 
+  947  history | grep health
+  948  curl http://10.11.23.90:9200/_cluster/health?pretty
+  949  tail -f /var/log/redis_6380 
+  950  date
+  951  tail -50f /var/log/redis_6380 
+  952  history | grep -i restart
+  953  history | grep -i redis
+  954  /usr/lib64/nagios/plugins/check_redis_queue.sh
+  955  tail -f /var/log/redis_6379 
+  956  tail -f /var/log/redis_6380 
+  957  df -h
+  958  tail -f /var/log/redis_6380 
+  959  free -g
+  960  tail -f /var/log/redis_6380 
+  961  last | more
+  962  history
+  963  curl http://10.11.23.90:9200/_cluster/health?pretty
+  964  history | grep -i restar
+  965  systemctl status elasticsearch
+  966  /etc/init.d/elasticsearch restart
+  967  systemctl status elasticsearch
+  968  exit
+  969  systemctl status elasticsearch
+  970  systemctl status elasticsearch -l
+  971  history 
+  972  curl http://10.11.23.90:9200/_cluster/health?pretty
+  973  ip a
+  974  systemctl status elasticsearch -l
+  975  tail -f /var/log/elasticsearch/denprodes.log 
+  976  date
+  977  tail -f /var/log/elasticsearch/denprodes.log 
+  978  rpm -qa | grep elasticseach
+  979  rpm -qa | grep elasticsearch
+  980  rpm -qa | grep logstash
+  981  systemctl status elasticsearch -l
+  982  curl http://10.11.23.90:9200/_cluster/health?pretty
+  983  tail -f /var/log/logstash2/logstash-plain.log 
+  984  date
+  985  systemctl status elasticsearch
+  986  tail -f /var/log/logstash/logstash-plain.log 
+  987  tail -f /var/log/logstash2/logstash-plain.log 
+  988  curl http://10.11.23.90:9200/_cluster/health?pretty
+  
+  998  systemctl status elasticsearch
+  999  history 
+ 1000  /usr/local/bin/redis-cli  -h 10.11.23.90 -p 6380 monitor
+ 1001  history 
+[root@den-prod-elk01 ~]# 
