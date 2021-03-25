@@ -1,0 +1,43 @@
+[root@station1 test]# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+devtmpfs                 908M     0  908M   0% /dev
+tmpfs                    919M     0  919M   0% /dev/shm
+tmpfs                    919M  8.6M  911M   1% /run
+tmpfs                    919M     0  919M   0% /sys/fs/cgroup
+/dev/mapper/centos-root   11G  9.6G  1.2G  89% /
+/dev/sda1               1014M  151M  864M  15% /boot
+tmpfs                    184M     0  184M   0% /run/user/0
+/dev/sdb1               1022M  4.6M  948M   1% /test
+[root@station1 test]# touch filedfd
+touch: cannot touch ‘filedfd’: No space left on device
+[root@station1 test]# 
+[root@station1 test]# 
+[root@station1 test]# 
+[root@station1 test]# 
+[root@station1 test]# 
+[root@station1 test]# 
+[root@station1 test]# lsblk 
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda               8:0    0   13G  0 disk 
+├─sda1            8:1    0    1G  0 part /boot
+└─sda2            8:2    0   12G  0 part 
+  ├─centos-root 253:0    0 10.8G  0 lvm  /
+  └─centos-swap 253:1    0  1.3G  0 lvm  [SWAP]
+sdb               8:16   0    1G  0 disk 
+└─sdb1            8:17   0    1G  0 part /test
+sr0              11:0    1 1024M  0 rom  
+[root@station1 test]#
+
+
+ git checkout -b test
+Switched to a new branch 'test'
+ saipavan   test  ~  test  
+ saipavan   test  ~  test  
+ saipavan   test  ~  test  git branch
+  master
+* test
+ saipavan   test  ~  test  git branch -m kiran
+ saipavan   kiran  ~  test  git branch
+* kiran
+  master
+ saipavan   kiran  ~  test  
