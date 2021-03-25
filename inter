@@ -66,6 +66,8 @@ what is the difference EFS and s3 and EBS
 
 #teraform
 
+
+#####
 Can u explain the build pipe line of building images to  deploy to cluster
 
 
@@ -76,6 +78,26 @@ what nodeport
 ingress
 
 kubernets cluster health
+
+Kubernets images questions
+###
+
+what is scripted pipeline and declrative pipe line
+
+How to set the build parmaeters
+
+what is master and slave nodes in jenkins
+
+DO you have any disaster recovery plan if yes so explain
+
+
+
+
+
+
+
+
+
 
 
 
