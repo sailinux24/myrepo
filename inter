@@ -96,6 +96,66 @@ DO you have any disaster recovery plan if yes so explain
 
 
 
+###########################################
+TOP command in linux explain the different columns
+
+cron job
+
+4    10   *    *   *   date (4 inute and 10 th hour it will execute daily)
+
+*/7     9-16   *    *  *   cmd   execute every 7 inutes from 9 am to 5 pm
+
+LVM  Explain the steps in creating of LVM 
+
+PV
+VG
+LV
+F/S ext3 xfs
+
+difference b.w f/s ext3/ext4  and xfs    file size is one condition
+
+What is the difference between nfsv3 and nfsv4
+
+###################################
+
+
+aws auto scaling 
+
+s3 -> steps
+
+logmonitorin how to enable log montoring on s3
+
+
+cloud watch and its usage
+
+VPC  and creation of subnets and  how to make a subent public  and private
+
+difference b/w nat and internetgateway
+
+########
+ansible shell and command odules difference 
+######
+Write a play book for install webserver
+#####
+
+
+how to pass variables to playbooks and its precedence order
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
