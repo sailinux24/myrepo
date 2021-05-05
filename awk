@@ -14,3 +14,6 @@ Used
 0
 145M
 0
+
+awk '{if($2~ /sai/) print}' f3.txt 
+2	sai	9000
